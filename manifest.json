@@ -28,7 +28,8 @@
         "fonts/PretendardVariable/PretendardVariable.css",
         "fonts/RIDIBatang/RIDIBatang.css",
         "fonts/SpoqaHanSansNeo/SpoqaHanSansNeo.css"
-      ]
+      ],
+      "js": ["content.js"]
     }
   ],
   "web_accessible_resources": [
