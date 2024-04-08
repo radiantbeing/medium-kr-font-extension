@@ -10,6 +10,6 @@ $configForm.addEventListener("submit", (e) => {
 });
 
 chrome.storage.sync.get(["font-family"], (config) => {
-  $configForm["font-family"].value = config["font-family"];
+  $configForm["font-family"].value = config["font-family"] ?? "";
   console.log("[MKRF] 설정이 복원되었습니다.", config);
 });
