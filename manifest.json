@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Medium KR Font",
+  "description": "원하는 서체로 Medium을 이용하세요.",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["https://*.medium.com/*"],
+      "css": [
+        "fonts/IBMPlexSansKR/IBMPlexSansKR.css",
+        "fonts/NotoSansKR/NotoSansKR.css",
+        "fonts/NotoSerifKR/NotoSerifKR.css",
+        "fonts/PretendardVariable/PretendardVariable.css",
+        "fonts/RIDIBatang/RIDIBatang.css",
+        "fonts/SpoqaHanSansNeo/SpoqaHanSansNeo.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["fonts/*"],
+      "matches": ["https://*.medium.com/*"]
+    }
+  ]
+}
