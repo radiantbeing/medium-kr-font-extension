@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>Medium KR Font</title>
+  </head>
+  <body>
+    <main>
+      <h1>Medium KR Font</h1>
+      <form id="config-form">
+        <fieldset>
+          <legend>환경 설정</legend>
+          <label for="font-family">Font Family</label>
+          <select name="font-family" id="font-family">
+            <option value="">기본값</option>
+            <optgroup label="Sans Serif">
+              <option value="IBM Plex Sans KR">IBM Plex Sans KR</option>
+              <option value="Noto Sans KR">Noto Sans KR</option>
+              <option value="Pretendard Variable">Pretendard Variable</option>
+              <option value="Spoqa Han Sans Neo">Spoqa Han Sans Neo</option>
+              <option value="Apple SD Gothic Neo">
+                Apple SD Gothic Neo (macOS 전용)
+              </option>
+            </optgroup>
+            <optgroup label="Serif">
+              <option value="Noto Serif KR">Noto Serif KR</option>
+              <option value="RIDIBatang">RIDIBatang</option>
+            </optgroup>
+          </select>
+        </fieldset>
+        <input type="submit" value="적용" />
+      </form>
+    </main>
+  </body>
+  <script type="module" src="popup.js"></script>
+</html>
