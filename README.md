@@ -1,8 +1,8 @@
-# Medium KR Font Extension
+# Medium KR Font
 
-본 크롬 확장 프로그램은 온라인 출판 플랫폼 [Medium](https://medium.com)의 한글 사용자를 대상으로 하며, Medium에서 OFL 라이선스 하에 배포되는 한글 서체를 사용할 수 있게 합니다.
+본 Chrome 확장 프로그램은 온라인 출판 플랫폼 [Medium](https://medium.com)에서 OFL 라이선스 하에 배포되는 한글 서체를 사용할 수 있게 합니다.
 
-![Medium 스토리 캡처](./docs/capture.png)
+![Medium KR Font Extension](./docs/hero.png)
 
 ## 시작하기
 
@@ -19,11 +19,13 @@
 4. [Medium](https://medium.com)에 접속하세요.
 5. 확장 프로그램에서 `Medium KR Font`를 선택하고 원하는 폰트를 적용하세요.
 
+![Medium 스토리 캡처](./docs/capture.png)
+
 ## 지원 서체 목록
 
 **Sans Serif**
 
-> Apple SD Gothic Neo는 사용자의 컴퓨터에 존재하는 로컬 서체를 로드하여 사용하기 때문에 Windows 환경에서는 사용할 수 없습니다. 그 외 모든 서체는 Chrome 확장 프로그램 내 임베딩되어 제공됩니다.
+> Apple SD Gothic Neo는 사용자의 컴퓨터에 존재하는 로컬 서체를 로드하여 사용하기 때문에 Windows 환경에서 사용할 수 없습니다. 그 외 모든 서체는 Chrome 확장 프로그램 내 임베딩되어 제공됩니다.
 
 - [IBM Plex Sans KR](https://www.ibm.com/plex/)
 - [Noto Sans KR](https://fonts.google.com/noto/)
