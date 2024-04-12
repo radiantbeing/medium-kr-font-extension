@@ -39,9 +39,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
     const { oldValue, newValue } = changes[key];
     if (key === "font-family") {
       if (newValue === "") {
-        window.alert(
-          "기본값으로 변경되었습니다. 페이지를 새로고침하시겠습니까?"
-        );
+        window.alert("기본값으로 변경되었습니다. 페이지를 새로 고칩니다.");
         window.location.reload();
       } else {
         removeFontFamilyStyleElement();
