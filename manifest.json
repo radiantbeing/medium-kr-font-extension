@@ -29,7 +29,7 @@
         "static/fonts/RIDIBatang/RIDIBatang.css",
         "static/fonts/SpoqaHanSansNeo/SpoqaHanSansNeo.css"
       ],
-      "js": ["content.js"]
+      "js": ["src/content.js"]
     }
   ],
   "web_accessible_resources": [
