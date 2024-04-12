@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  padding: 12px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+header > h1 {
+  font-size: large;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+input[type="submit"] {
+  margin-top: 12px;
+  padding: 8px 16px;
+  color: #ffffff;
+  background-color: black;
+  border-style: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
