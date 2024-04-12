@@ -30,6 +30,10 @@
 - [Noto Serif KR](https://fonts.google.com/noto/)
 - [RIDIBatang](https://ridicorp.com/ridibatang/)
 
+## 유의 사항
+
+접속 중인 페이지의 URL 패턴이 `https://*.medium.com/*`과 일치하지 않는 경우 본 확장 프로그램은 작동하지 않습니다. 커스텀 도메인 사용 시 유의 바랍니다.
+
 ## 감사말
 
 - 본 프로젝트는 guruahn 님의 [medium_korea_font](https://github.com/guruahn/medium_korea_font)에서 영감을 얻었습니다.
