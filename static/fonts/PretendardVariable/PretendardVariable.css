@@ -12,6 +12,6 @@ http://scripts.sil.org/OFL
   font-weight: 45 920;
   font-display: swap;
   src: local("Pretendard Variable"),
-    url("chrome-extension://__MSG_@@extension_id__/fonts/PretendardVariable/PretendardVariable.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/static/fonts/PretendardVariable/PretendardVariable.woff2")
       format("woff2-variations");
 }

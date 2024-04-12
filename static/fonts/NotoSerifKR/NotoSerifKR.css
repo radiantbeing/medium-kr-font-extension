@@ -3,7 +3,7 @@
   font-weight: 200;
   font-display: swap;
   src: local("Noto Serif KR ExtraLight"),
-    url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-ExtraLight.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/static/fonts/NotoSerifKR/NotoSerifKR-ExtraLight.woff2")
       format("woff2");
 }
 
@@ -12,7 +12,7 @@
   font-weight: 300;
   font-display: swap;
   src: local("Noto Serif KR Light"),
-    url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-Light.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/static/fonts/NotoSerifKR/NotoSerifKR-Light.woff2")
       format("woff2");
 }
 
@@ -21,7 +21,7 @@
   font-weight: 400;
   font-display: swap;
   src: local("Noto Serif KR"),
-    url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-Regular.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/static/fonts/NotoSerifKR/NotoSerifKR-Regular.woff2")
       format("woff2");
 }
 
@@ -30,7 +30,7 @@
   font-weight: 500;
   font-display: swap;
   src: local("Noto Serif KR Medium"),
-    url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-Medium.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/static/fonts/NotoSerifKR/NotoSerifKR-Medium.woff2")
       format("woff2");
 }
 
@@ -39,7 +39,7 @@
   font-weight: 600;
   font-display: swap;
   src: local("Noto Serif KR SemiBold"),
-    url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-SemiBold.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/static/fonts/NotoSerifKR/NotoSerifKR-SemiBold.woff2")
       format("woff2");
 }
 
@@ -48,7 +48,7 @@
   font-weight: 700;
   font-display: swap;
   src: local("Noto Serif KR Bold"),
-    url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-Bold.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/static/fonts/NotoSerifKR/NotoSerifKR-Bold.woff2")
       format("woff2");
 }
 
@@ -57,6 +57,6 @@
   font-weight: 900;
   font-display: swap;
   src: local("Noto Serif KR Black"),
-    url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-Black.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/static/fonts/NotoSerifKR/NotoSerifKR-Black.woff2")
       format("woff2");
 }

@@ -3,6 +3,6 @@
   font-weight: 100 900;
   font-display: swap;
   src: local("Noto Sans KR"),
-    url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSansKR/NotoSansKR.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/static/fonts/NotoSansKR/NotoSansKR.woff2")
       format("woff2");
 }

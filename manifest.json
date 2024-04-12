@@ -22,19 +22,19 @@
     {
       "matches": ["https://*.medium.com/*"],
       "css": [
-        "fonts/IBMPlexSansKR/IBMPlexSansKR.css",
-        "fonts/NotoSansKR/NotoSansKR.css",
-        "fonts/NotoSerifKR/NotoSerifKR.css",
-        "fonts/PretendardVariable/PretendardVariable.css",
-        "fonts/RIDIBatang/RIDIBatang.css",
-        "fonts/SpoqaHanSansNeo/SpoqaHanSansNeo.css"
+        "static/fonts/IBMPlexSansKR/IBMPlexSansKR.css",
+        "static/fonts/NotoSansKR/NotoSansKR.css",
+        "static/fonts/NotoSerifKR/NotoSerifKR.css",
+        "static/fonts/PretendardVariable/PretendardVariable.css",
+        "static/fonts/RIDIBatang/RIDIBatang.css",
+        "static/fonts/SpoqaHanSansNeo/SpoqaHanSansNeo.css"
       ],
       "js": ["content.js"]
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["fonts/*"],
+      "resources": ["static/fonts/*"],
       "matches": ["https://*.medium.com/*"]
     }
   ],
