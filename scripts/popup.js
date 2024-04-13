@@ -15,7 +15,7 @@ const render = () => {
   _root.innerHTML = /* HTML */ `
     <main>
       <header>
-        <img src="icon-outline.svg" alt="Medium KR Font" />
+        <img src="images/logo.svg" alt="Medium KR Font" />
         <h1>Medium KR Font</h1>
       </header>
       <form>

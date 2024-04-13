@@ -4,7 +4,7 @@
   font-weight: 100 800;
   font-display: swap;
   src: local("JetBrains Mono"),
-    url("chrome-extension://__MSG_@@extension_id__/static/fonts/JetBrainsMono/JetBrainsMonoItalicVariable.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/fonts/JetBrainsMono/JetBrainsMonoItalicVariable.woff2")
       format("woff2");
 }
 
@@ -14,6 +14,6 @@
   font-weight: 100 800;
   font-display: swap;
   src: local("JetBrains Mono"),
-    url("chrome-extension://__MSG_@@extension_id__/static/fonts/JetBrainsMono/JetBrainsMonoVariable.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/fonts/JetBrainsMono/JetBrainsMonoVariable.woff2")
       format("woff2");
 }

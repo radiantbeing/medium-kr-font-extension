@@ -3,6 +3,6 @@
   font-weight: 400;
   font-display: swap;
   src: local("RIDIBatang"),
-    url("chrome-extension://__MSG_@@extension_id__/static/fonts/RIDIBatang/RIDIBatang.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/fonts/RIDIBatang/RIDIBatang.woff2")
       format("woff2");
 }

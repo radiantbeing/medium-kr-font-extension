@@ -3,7 +3,7 @@
   font-weight: 100;
   font-display: swap;
   src: local("IBM Plex Sans KR Thin"),
-    url("chrome-extension://__MSG_@@extension_id__/static/fonts/IBMPlexSansKR/IBMPlexSansKR-Thin.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/fonts/IBMPlexSansKR/IBMPlexSansKR-Thin.woff2")
       format("woff2");
 }
 
@@ -12,7 +12,7 @@
   font-weight: 200;
   font-display: swap;
   src: local("IBM Plex Sans KR ExtraLight"),
-    url("chrome-extension://__MSG_@@extension_id__/static/fonts/IBMPlexSansKR/IBMPlexSansKR-ExtraLight.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/fonts/IBMPlexSansKR/IBMPlexSansKR-ExtraLight.woff2")
       format("woff2");
 }
 
@@ -21,7 +21,7 @@
   font-weight: 300;
   font-display: swap;
   src: local("IBM Plex Sans KR Light"),
-    url("chrome-extension://__MSG_@@extension_id__/static/fonts/IBMPlexSansKR/IBMPlexSansKR-Light.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/fonts/IBMPlexSansKR/IBMPlexSansKR-Light.woff2")
       format("woff2");
 }
 
@@ -30,7 +30,7 @@
   font-weight: 400;
   font-display: swap;
   src: local("IBM Plex Sans KR Regular"),
-    url("chrome-extension://__MSG_@@extension_id__/static/fonts/IBMPlexSansKR/IBMPlexSansKR-Regular.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/fonts/IBMPlexSansKR/IBMPlexSansKR-Regular.woff2")
       format("woff2");
 }
 
@@ -39,7 +39,7 @@
   font-weight: 500;
   font-display: swap;
   src: local("IBM Plex Sans KR Medium"),
-    url("chrome-extension://__MSG_@@extension_id__/static/fonts/IBMPlexSansKR/IBMPlexSansKR-Medium.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/fonts/IBMPlexSansKR/IBMPlexSansKR-Medium.woff2")
       format("woff2");
 }
 
@@ -48,7 +48,7 @@
   font-weight: 600;
   font-display: swap;
   src: local("IBM Plex Sans KR SemiBold"),
-    url("chrome-extension://__MSG_@@extension_id__/static/fonts/IBMPlexSansKR/IBMPlexSansKR-SemiBold.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/fonts/IBMPlexSansKR/IBMPlexSansKR-SemiBold.woff2")
       format("woff2");
 }
 
@@ -57,6 +57,6 @@
   font-weight: 700;
   font-display: swap;
   src: local("IBM Plex Sans KR Bold"),
-    url("chrome-extension://__MSG_@@extension_id__/static/fonts/IBMPlexSansKR/IBMPlexSansKR-Bold.woff2")
+    url("chrome-extension://__MSG_@@extension_id__/fonts/IBMPlexSansKR/IBMPlexSansKR-Bold.woff2")
       format("woff2");
 }
