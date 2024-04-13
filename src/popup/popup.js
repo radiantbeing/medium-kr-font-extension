@@ -24,7 +24,7 @@ const render = () => {
           <label>
             Font Family
             <select name="font-family">
-              <option selected value="">기본값</option>
+              <option value="">기본값</option>
               <optgroup label="Sans Serif">
                 ${fontFamilies.sansSerif.map(
                   (fontFamily) => /* HTML */ `<option value="${fontFamily}">
