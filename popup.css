@@ -36,3 +36,10 @@ input[type="submit"] {
   border-radius: 8px;
   cursor: pointer;
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: small;
+}
