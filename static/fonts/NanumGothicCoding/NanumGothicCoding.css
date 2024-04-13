@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Nanum Gothic Coding";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nanum Gothic Coding"),
+    url("chrome-extension://__MSG_@@extension_id__/static/fonts/NanumGothicCoding/NanumGothicCoding-Regular.woff2")
+      format("woff2");
+}
+
+@font-face {
+  font-family: "Nanum Gothic Coding";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nanum Gothic Coding"),
+    url("chrome-extension://__MSG_@@extension_id__/static/fonts/NanumGothicCoding/NanumGothicCoding-Bold.woff2")
+      format("woff2");
+}

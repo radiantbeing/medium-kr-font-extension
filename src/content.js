@@ -7,7 +7,7 @@ const appendFontFamilyStyleElement = (fontFamily) => {
     }
     pre *, 
     code {
-        font-family: source-code-pro, Menlo, Monaco, "Courier New", Courier, monospace !important; 
+        font-family: "JetBrains Mono", "Nanum Gothic Coding", monospace !important; 
     }
   `;
   document.head.appendChild(_style);
