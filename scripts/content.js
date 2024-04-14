@@ -7,7 +7,7 @@ const appendFontFamilyStyleElement = (fontFamily) => {
     }
     pre *, 
     code {
-        font-family: "JetBrains Mono", "Nanum Gothic Coding", monospace !important; 
+        font-family: "JetBrains Mono", "D2Coding", monospace !important; 
     }
   `;
   document.head.appendChild(_style);

@@ -29,7 +29,7 @@
         "fonts/RIDIBatang/RIDIBatang.css",
         "fonts/SpoqaHanSansNeo/SpoqaHanSansNeo.css",
         "fonts/JetBrainsMono/JetBrainsMono.css",
-        "fonts/NanumGothicCoding/NanumGothicCoding.css"
+        "fonts/D2Coding/D2Coding.css"
       ],
       "js": ["scripts/content.js"]
     }
