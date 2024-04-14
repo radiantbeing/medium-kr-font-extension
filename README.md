@@ -1,6 +1,6 @@
 # Medium KR Font
 
-본 Chrome 확장 프로그램은 온라인 출판 플랫폼 [Medium](https://medium.com)에서 OFL 라이선스 하에 배포되는 한글 서체를 사용할 수 있게 합니다.
+본 Chrome 확장 프로그램은 온라인 출판 플랫폼 [Medium](https://medium.com)에서 [OFL](https://openfontlicense.org/) 한글 서체를 사용할 수 있게 합니다.
 
 [Chrome 웹 스토어](https://chromewebstore.google.com/detail/medium-kr-font/lkbbjppklcnjoigfnlhmnommkjkbjdgf)
 
