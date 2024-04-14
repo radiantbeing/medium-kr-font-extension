@@ -17,18 +17,27 @@
 
 **Sans Serif**
 
-> Apple SD Gothic Neo는 사용자의 컴퓨터에 존재하는 로컬 서체를 로드하여 사용하기 때문에 Windows 환경에서 사용할 수 없습니다. 그 외 모든 서체는 Chrome 확장 프로그램 내 임베딩되어 제공됩니다.
+> Apple SD Gothic Neo는 사용자의 컴퓨터에 존재하는 로컬 서체를 로드하여 사용하기 때문에 Windows 환경에서 사용할 수 없습니다. 그 외 모든 서체는 확장 프로그램 내 임베딩되어 제공됩니다.
 
+- Apple SD Gothic Neo (macOS 전용)
 - [IBM Plex Sans KR](https://www.ibm.com/plex/)
+- [Nanum Barun Gothic](https://hangeul.naver.com/font/)
+- [Nanum Gothic](https://hangeul.naver.com/font/)
 - [Noto Sans KR](https://fonts.google.com/noto/)
 - [Pretendard Variable](https://cactus.tistory.com/306/)
 - [Spoqa Han Sans Neo](https://spoqa.github.io/spoqa-han-sans/)
-- Apple SD Gothic Neo (macOS 전용)
 
 **Serif**
 
 - [Noto Serif KR](https://fonts.google.com/noto/)
 - [RIDIBatang](https://ridicorp.com/ridibatang/)
+
+**Monospace**
+
+> 확장 프로그램에서 기본값을 제외한 임의의 Font Family를 설정할 경우, 코드 블록 및 인라인 코드에 아래와 같은 고정폭 서체가 자동으로 적용됩니다.
+
+- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+- [D2Coding](https://github.com/naver/d2codingfont/)
 
 ## 유의 사항
 
