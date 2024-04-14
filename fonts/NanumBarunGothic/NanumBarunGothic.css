@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Nanum Barun Gothic";
+  font-weight: 100;
+  font-display: swap;
+  src: local("NanumBarunGothic"),
+    url("chrome-extension://__MSG_@@extension_id__/fonts/NanumBarunGothic/NanumBarunGothicUltraLight.woff2")
+      format("woff2");
+}
+
+@font-face {
+  font-family: "Nanum Barun Gothic";
+  font-weight: 300;
+  font-display: swap;
+  src: local("NanumBarunGothic"),
+    url("chrome-extension://__MSG_@@extension_id__/fonts/NanumBarunGothic/NanumBarunGothicLight.woff2")
+      format("woff2");
+}
+
+@font-face {
+  font-family: "Nanum Barun Gothic";
+  font-weight: 400;
+  font-display: swap;
+  src: local("NanumBarunGothic"),
+    url("chrome-extension://__MSG_@@extension_id__/fonts/NanumBarunGothic/NanumBarunGothic.woff2")
+      format("woff2");
+}
+
+@font-face {
+  font-family: "Nanum Barun Gothic";
+  font-weight: 700;
+  font-display: swap;
+  src: local("NanumBarunGothic"),
+    url("chrome-extension://__MSG_@@extension_id__/fonts/NanumBarunGothic/NanumBarunGothicBold.woff2")
+      format("woff2");
+}

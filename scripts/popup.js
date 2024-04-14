@@ -2,6 +2,7 @@ const fontFamilies = {
   sansSerif: [
     "Apple SD Gothic Neo",
     "IBM Plex Sans KR",
+    "Nanum Barun Gothic",
     "Noto Sans KR",
     "Pretendard Variable",
     "Spoqa Han Sans Neo",
