@@ -22,15 +22,16 @@
     {
       "matches": ["https://*.medium.com/*"],
       "css": [
+        "fonts/D2Coding/D2Coding.css",
         "fonts/IBMPlexSansKR/IBMPlexSansKR.css",
+        "fonts/JetBrainsMono/JetBrainsMono.css",
+        "fonts/NanumBarunGothic/NanumBarunGothic.css",
+        "fonts/NanumGothic/NanumGothic.css",
         "fonts/NotoSansKR/NotoSansKR.css",
         "fonts/NotoSerifKR/NotoSerifKR.css",
         "fonts/PretendardVariable/PretendardVariable.css",
         "fonts/RIDIBatang/RIDIBatang.css",
-        "fonts/SpoqaHanSansNeo/SpoqaHanSansNeo.css",
-        "fonts/JetBrainsMono/JetBrainsMono.css",
-        "fonts/D2Coding/D2Coding.css",
-        "fonts/NanumBarunGothic/NanumBarunGothic.css"
+        "fonts/SpoqaHanSansNeo/SpoqaHanSansNeo.css"
       ],
       "js": ["scripts/content.js"]
     }
