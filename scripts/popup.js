@@ -1,18 +1,21 @@
-const fontFamilies = {
-  sansSerif: [
-    "Apple SD Gothic Neo",
-    "IBM Plex Sans KR",
-    "Nanum Barun Gothic",
-    "Nanum Gothic",
-    "Noto Sans KR",
-    "Pretendard Variable",
-    "Spoqa Han Sans Neo",
-  ],
-  serif: ["Noto Serif KR", "RIDIBatang"],
-};
+import { typefaces } from "./lib/typefaces.js";
 
 const render = () => {
-  const _root = document.querySelector("#root");
+  const _root = document.getElementById("root");
+  const _sansSerifOptions = typefaces
+    .filter(({ style }) => style === "sans-serif")
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map(
+      ({ name, value }) =>
+        /* HTML */ `<option value="${value}">${name}</option>`
+    );
+  const _serifOptions = typefaces
+    .filter(({ style }) => style === "serif")
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map(
+      ({ name, value }) =>
+        /* HTML */ `<option value="${value}">${name}</option>`
+    );
 
   _root.innerHTML = /* HTML */ `
     <main>
@@ -24,23 +27,15 @@ const render = () => {
         <fieldset>
           <legend>환경 설정</legend>
           <label>
-            Font Family
+            서체
             <select name="font-family">
-              <option value="">기본값</option>
-              <optgroup label="Sans Serif">
-                ${fontFamilies.sansSerif.map(
-                  (fontFamily) => /* HTML */ `<option value="${fontFamily}">
-                    ${fontFamily}
-                  </option>`
-                )}
+              <option value="">설정 안 함</option>
+              <optgroup label="시스템 기본값">
+                <option value="sans-serif">Sans Serif</option>
+                <option value="serif">Serif</option>
               </optgroup>
-              <optgroup label="Serif">
-                ${fontFamilies.serif.map(
-                  (fontFamily) => /* HTML */ `<option value="${fontFamily}">
-                    ${fontFamily}
-                  </option>`
-                )}
-              </optgroup>
+              <optgroup label="Sans Serif">${_sansSerifOptions}</optgroup>
+              <optgroup label="Serif">${_serifOptions}</optgroup>
             </select>
           </label>
         </fieldset>
