@@ -1,21 +1,20 @@
 import { typefaces } from "./lib/typefaces.js";
 
+/**
+ * `root` 요소에 팝업 UI를 렌더링합니다.
+ */
 const render = () => {
+  const generateOptions = (fontStyle) =>
+    typefaces
+      .filter(({ style }) => style === fontStyle)
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map(
+        ({ name, value }) =>
+          /* HTML */ `<option value="${value}">${name}</option>`
+      );
   const _root = document.getElementById("root");
-  const _sansSerifOptions = typefaces
-    .filter(({ style }) => style === "sans-serif")
-    .sort((a, b) => a.name.localeCompare(b.name))
-    .map(
-      ({ name, value }) =>
-        /* HTML */ `<option value="${value}">${name}</option>`
-    );
-  const _serifOptions = typefaces
-    .filter(({ style }) => style === "serif")
-    .sort((a, b) => a.name.localeCompare(b.name))
-    .map(
-      ({ name, value }) =>
-        /* HTML */ `<option value="${value}">${name}</option>`
-    );
+  const _sansSerifOptions = generateOptions("sans-serif");
+  const _serifOptions = generateOptions("serif");
 
   _root.innerHTML = /* HTML */ `
     <main>
@@ -54,12 +53,16 @@ const render = () => {
   `;
 };
 
+render();
+
+/**
+ * 양식 제출 이벤트 핸들러를 추가합니다.
+ */
 const addFormSubmitHandler = async () => {
   const _form = document.querySelector("form");
 
   _form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const formData = new FormData(e.target);
     const config = Object.fromEntries(formData);
     await chrome.storage.sync.set(config);
@@ -67,6 +70,12 @@ const addFormSubmitHandler = async () => {
   });
 };
 
+await addFormSubmitHandler();
+
+/**
+ * Storage에 저장된 설정으로부터 양식 값을 복원합니다.
+ * @returns {Promise<void>}
+ */
 const restoreFormValue = async () => {
   const _form = document.querySelector("form");
   const config = await chrome.storage.sync.get();
@@ -82,6 +91,4 @@ const restoreFormValue = async () => {
   console.log("[MKRF] 설정이 복원되었습니다.", config);
 };
 
-render();
-await addFormSubmitHandler();
 await restoreFormValue();
