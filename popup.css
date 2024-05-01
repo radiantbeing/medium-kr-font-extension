@@ -1,3 +1,5 @@
+@import url("chrome-extension://__MSG_@@extension_id__/fonts/Tinos/Tinos.css");
+
 * {
   box-sizing: border-box;
 }
@@ -17,8 +19,16 @@ header {
   margin-bottom: 12px;
 }
 
+header > img {
+  margin-bottom: 2px;
+  width: 20px;
+  height: 20px;
+}
+
 header > h1 {
-  font-size: large;
+  font-family: "Tinos", serif;
+  font-size: 1.2rem;
+  white-space: nowrap;
 }
 
 label {
@@ -31,7 +41,7 @@ input[type="submit"] {
   margin-top: 12px;
   padding: 8px 16px;
   color: #ffffff;
-  background-color: black;
+  background-color: #0f0f0f;
   border-style: none;
   border-radius: 8px;
   cursor: pointer;

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Tinos";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Tinos Regular"),
+    url("chrome-extension://__MSG_@@extension_id__/fonts/Tinos/Tinos-Regular.woff2")
+      format("woff2");
+}
