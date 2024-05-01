@@ -11,6 +11,11 @@ export const typefaces = [
   },
   { name: "나눔고딕", value: "Nanum Gothic", style: "sans-serif" },
   {
+    name: "나눔스퀘어 네오",
+    value: "Nanum Square Neo Variable",
+    style: "sans-serif",
+  },
+  {
     name: "Noto Sans Korean",
     value: "Noto Sans KR",
     style: "sans-serif",
