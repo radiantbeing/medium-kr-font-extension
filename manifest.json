@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Medium KR Font",
-  "description": "원하는 한글 서체로 Medium을 이용하세요.",
+  "description": "아름다운 한글 서체로 새롭게 즐기는 Medium",
   "version": "1.0.5",
   "icons": {
     "16": "images/icon-16.png",
