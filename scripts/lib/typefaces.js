@@ -12,7 +12,7 @@ export const typefaces = [
   { name: "나눔고딕", value: "Nanum Gothic", style: "sans-serif" },
   {
     name: "나눔스퀘어 네오",
-    value: "Nanum Square Neo Variable",
+    value: "NanumSquare Neo variable",
     style: "sans-serif",
   },
   {

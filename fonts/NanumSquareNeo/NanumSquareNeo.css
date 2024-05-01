@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Nanum Square Neo Variable";
+  font-family: "NanumSquare Neo variable";
   font-display: swap;
   src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumSquareNeo/NanumSquareNeo-Variable.woff2")
     format("woff2-variations");
