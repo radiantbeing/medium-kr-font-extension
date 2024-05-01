@@ -45,6 +45,11 @@ input[type="submit"] {
   border-style: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 150ms;
+}
+
+input[type="submit"]:hover {
+  background-color: #575757;
 }
 
 footer {
