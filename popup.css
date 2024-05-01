@@ -1,15 +1,27 @@
 @import url("chrome-extension://__MSG_@@extension_id__/fonts/Tinos/Tinos.css");
 
+:root {
+  --color-black: #0f0f0f;
+  --color-gray: #878d91;
+  --color-lightgray: #a9afb3;
+  --color-blue: #4c80f1;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  color: var(--color-black);
 }
 
 main {
   padding: 12px;
+}
+
+a {
+  color: var(--color-blue);
 }
 
 header {
@@ -41,7 +53,7 @@ input[type="submit"] {
   margin-top: 12px;
   padding: 8px 16px;
   color: #ffffff;
-  background-color: #0f0f0f;
+  background-color: var(--color-black);
   border-style: none;
   border-radius: 8px;
   cursor: pointer;
@@ -49,7 +61,11 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #575757;
+  background-color: var(--color-gray);
+}
+
+input[type="submit"]:active {
+  background-color: var(--color-lightgray);
 }
 
 footer {
