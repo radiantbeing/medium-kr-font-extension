@@ -1,5 +1,4 @@
 import { typefaces } from "./libs/typefaces.js";
-import "./styles/popup.css";
 import logo from "./assets/logo.svg";
 
 /**
