@@ -22,17 +22,17 @@
     {
       "matches": ["https://*.medium.com/*"],
       "css": [
-        "fonts/D2Coding/D2Coding.css",
-        "fonts/JetBrainsMono/JetBrainsMono.css",
-        "fonts/IBMPlexSansKR/IBMPlexSansKR.css",
-        "fonts/NanumBarunGothic/NanumBarunGothic.css",
-        "fonts/NanumGothic/NanumGothic.css",
-        "fonts/NanumSquareNeo/NanumSquareNeo.css",
-        "fonts/NotoSansKR/NotoSansKR.css",
-        "fonts/NotoSerifKR/NotoSerifKR.css",
-        "fonts/PretendardVariable/PretendardVariable.css",
-        "fonts/RIDIBatang/RIDIBatang.css",
-        "fonts/SpoqaHanSansNeo/SpoqaHanSansNeo.css"
+        "typefaces/D2Coding/D2Coding.css",
+        "typefaces/JetBrainsMono/JetBrainsMono.css",
+        "typefaces/IBMPlexSansKR/IBMPlexSansKR.css",
+        "typefaces/NanumBarunGothic/NanumBarunGothic.css",
+        "typefaces/NanumGothic/NanumGothic.css",
+        "typefaces/NanumSquareNeo/NanumSquareNeo.css",
+        "typefaces/NotoSansKR/NotoSansKR.css",
+        "typefaces/NotoSerifKR/NotoSerifKR.css",
+        "typefaces/PretendardVariable/PretendardVariable.css",
+        "typefaces/RIDIBatang/RIDIBatang.css",
+        "typefaces/SpoqaHanSansNeo/SpoqaHanSansNeo.css"
       ],
       "js": ["content-script.bundle.js"]
     }
@@ -42,7 +42,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["fonts/*"],
+      "resources": ["typefaces/*"],
       "matches": ["https://*.medium.com/*"]
     }
   ],
