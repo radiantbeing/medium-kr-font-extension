@@ -3,9 +3,9 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 const config = {
   entry: {
-    popup: "./src/popup.js",
-    "content-script": "./src/content-script.js",
-    "service-worker": "./src/service-worker.js",
+    popup: "./src/popup.ts",
+    "content-script": "./src/content-script.ts",
+    "service-worker": "./src/service-worker.ts",
   },
   plugins: [
     new CopyPlugin({
@@ -39,7 +39,15 @@ const config = {
         test: /\.xml$/i,
         use: ["xml-loader"],
       },
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
   },
 };
 
