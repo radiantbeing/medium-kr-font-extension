@@ -1,17 +1,18 @@
-import { typefaces } from "./libs/typefaces.js";
+import { Typeface, typefaces } from "./libs/typefaces";
 
 /**
  * `root` 요소에 팝업 UI를 렌더링합니다.
  */
 const render = () => {
-  const generateOptions = (fontStyle) =>
+  const generateOptions = (style: Typeface["style"]) =>
     typefaces
-      .filter(({ style }) => style === fontStyle)
+      .filter((typeface) => typeface.style === style)
       .sort((a, b) => a.name.localeCompare(b.name))
       .map(
         ({ name, value }) =>
           /* HTML */ `<option value="${value}">${name}</option>`
       );
+
   const _root = document.getElementById("root");
   const _sansSerifOptions = generateOptions("sans-serif");
   const _serifOptions = generateOptions("serif");
@@ -53,8 +54,6 @@ const render = () => {
   `;
 };
 
-render();
-
 /**
  * 양식 제출 이벤트 핸들러를 추가합니다.
  */
@@ -63,14 +62,14 @@ const addFormSubmitHandler = async () => {
 
   _form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const config = Object.fromEntries(formData);
+    const formData = new FormData(e.target as HTMLFormElement);
+    const config = Object.fromEntries(
+      formData as unknown as [string, string][]
+    );
     await chrome.storage.sync.set(config);
     console.log("[MKRF] 설정이 저장되었습니다.", config);
   });
 };
-
-await addFormSubmitHandler();
 
 /**
  * Storage에 저장된 설정으로부터 양식 값을 복원합니다.
@@ -91,4 +90,13 @@ const restoreFormValue = async () => {
   console.log("[MKRF] 설정이 복원되었습니다.", config);
 };
 
-await restoreFormValue();
+/**
+ * 팝업을 초기화합니다.
+ */
+const initialize = async () => {
+  render();
+  await addFormSubmitHandler();
+  await restoreFormValue();
+};
+
+initialize();

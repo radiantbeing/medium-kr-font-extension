@@ -1,9 +1,15 @@
-const appendFontFamilyStyleElement = (fontFamily) => {
+import { Typeface } from "./libs/typefaces";
+
+/**
+ * 서체 스타일 요소를 문서 헤드에 추가합니다.
+ * @param value 서체 값
+ */
+const appendFontFamilyStyleElement = (value: Typeface["value"]) => {
   const _style = document.createElement("style");
   _style.id = "mkrf-font-family-style";
   _style.textContent = /* CSS */ `
     * {
-        font-family: ${fontFamily} !important; 
+        font-family: ${value} !important; 
     }
     pre *, 
     code {
@@ -13,6 +19,9 @@ const appendFontFamilyStyleElement = (fontFamily) => {
   document.head.appendChild(_style);
 };
 
+/**
+ * 서체 스타일 요소를 문서 헤드에서 제거합니다.
+ */
 const removeFontFamilyStyleElement = () => {
   const _style = document.getElementById("mkrf-font-family-style");
   if (_style) {
@@ -20,6 +29,9 @@ const removeFontFamilyStyleElement = () => {
   }
 };
 
+/**
+ * 저장된 서체를 적용합니다.
+ */
 const applyStoredFontFamily = async () => {
   const config = await chrome.storage.sync.get();
   for (const key in config) {
@@ -31,8 +43,6 @@ const applyStoredFontFamily = async () => {
     }
   }
 };
-
-applyStoredFontFamily();
 
 chrome.storage.onChanged.addListener((changes, area) => {
   for (const key in changes) {
@@ -47,3 +57,5 @@ chrome.storage.onChanged.addListener((changes, area) => {
     }
   }
 });
+
+applyStoredFontFamily();
