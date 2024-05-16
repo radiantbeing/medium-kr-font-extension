@@ -1,4 +1,4 @@
-@import url("chrome-extension://__MSG_@@extension_id__/fonts/Tinos/Tinos.css");
+@import url("./fonts/Tinos/Tinos.css");
 
 :root {
   --color-black: #0f0f0f;
