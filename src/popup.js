@@ -1,4 +1,6 @@
-import { typefaces } from "./lib/typefaces.js";
+import { typefaces } from "./libs/typefaces.js";
+import "./styles/popup.css";
+import logo from "./assets/logo.svg";
 
 /**
  * `root` 요소에 팝업 UI를 렌더링합니다.
@@ -19,7 +21,7 @@ const render = () => {
   _root.innerHTML = /* HTML */ `
     <main>
       <header>
-        <img src="images/logo.svg" alt="Medium KR Font" />
+        <img src="${logo}" alt="Medium KR Font" />
         <h1>Medium KR Font</h1>
       </header>
       <form>
