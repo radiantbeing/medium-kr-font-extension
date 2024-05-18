@@ -3,9 +3,22 @@ import { log } from "./libs/log";
 import { Settings, getSettings, setSettings } from "./libs/settings";
 
 /**
+ * 현재 탭이 Medium인지 확인합니다.
+ * @returns Medium URL 일치 여부
+ */
+const isMediumDomain = async () => {
+  const tabs = await chrome.tabs.query({
+    active: true,
+    lastFocusedWindow: true,
+  });
+  const currentTab = tabs[0];
+  return currentTab.url.includes("medium.com");
+};
+
+/**
  * `root` 요소에 팝업 UI를 렌더링합니다.
  */
-const render = () => {
+const render = async () => {
   const generateOptions = (style: Font["style"]) =>
     fonts
       .filter((font) => font.style === style)
@@ -14,11 +27,12 @@ const render = () => {
         ({ value, name }) =>
           /* HTML */ `<option value="${value}">${name}</option>`
       );
-
+  const version = chrome.runtime.getManifest().version;
+  const isMedium = await isMediumDomain();
+  const helperText = isMedium ? "" : "접속 중인 사이트는 Medium이 아닙니다.";
   const _root = document.getElementById("root");
   const _sansSerifOptions = generateOptions("sans-serif");
   const _serifOptions = generateOptions("serif");
-  const version = chrome.runtime.getManifest().version;
 
   _root.innerHTML = /* HTML */ `
     <main>
@@ -44,8 +58,9 @@ const render = () => {
         </fieldset>
         <input type="submit" value="적용" />
       </form>
+      <p>${helperText}</p>
       <footer>
-        <span>버전 ${version}</span>
+        <span>v${version}</span>
         <a
           href="https://github.com/radiantbeing/medium-kr-font-extension"
           target="_blank"
@@ -97,7 +112,7 @@ const restoreFormValue = async (): Promise<void> => {
  * 팝업을 초기화합니다.
  */
 const initialize = async () => {
-  render();
+  await render();
   await addFormSubmitHandler();
   await restoreFormValue();
 };
