@@ -9,7 +9,7 @@ const render = () => {
       .filter((font) => font.style === style)
       .sort((a, b) => a.name.localeCompare(b.name))
       .map(
-        ({ name, value }) =>
+        ({ value, name }) =>
           /* HTML */ `<option value="${value}">${name}</option>`
       );
 
