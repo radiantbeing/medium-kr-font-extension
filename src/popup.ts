@@ -1,4 +1,5 @@
 import { Font, fonts } from "./libs/fonts";
+import { log } from "./libs/log";
 
 /**
  * `root` 요소에 팝업 UI를 렌더링합니다.
@@ -67,7 +68,7 @@ const addFormSubmitHandler = async () => {
       formData as unknown as [string, string][]
     );
     await chrome.storage.sync.set(config);
-    console.log("[MKRF] 설정이 저장되었습니다.", config);
+    log.info("설정이 저장되었습니다.", config);
   });
 };
 
@@ -81,13 +82,13 @@ const restoreFormValue = async () => {
   const isEmpty = Object.keys(config).length === 0;
 
   if (isEmpty) {
-    console.log("[MKRF] 저장된 설정이 없습니다.", config);
+    log.info("저장된 설정이 없습니다.", config);
     return;
   }
   for (const key in config) {
     _form[key].value = config[key];
   }
-  console.log("[MKRF] 설정이 복원되었습니다.", config);
+  log.info("설정이 복원되었습니다.", config);
 };
 
 /**
