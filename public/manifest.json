@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Medium KR Font",
   "description": "아름다운 한글 글꼴로 새롭게 즐기는 Medium",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "icons": {
     "16": "images/icon-16.png",
     "32": "images/icon-32.png",
