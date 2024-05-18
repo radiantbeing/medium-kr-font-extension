@@ -20,6 +20,10 @@ main {
   padding: 12px;
 }
 
+main > p {
+  word-break: keep-all;
+}
+
 a {
   color: var(--color-blue);
 }
