@@ -1,4 +1,5 @@
 import { Font } from "./libs/fonts";
+import { getSettings } from "./libs/settings";
 
 /**
  * 글꼴 스타일 요소를 문서 헤드에 추가합니다.
@@ -33,7 +34,7 @@ const removeFontFamilyStyleElement = () => {
  * 저장된 글꼴을 적용합니다.
  */
 const applyStoredFontFamily = async () => {
-  const config = await chrome.storage.sync.get();
+  const config = await getSettings();
   for (const key in config) {
     if (key === "font-family") {
       const fontFamily = config[key];
@@ -44,7 +45,7 @@ const applyStoredFontFamily = async () => {
   }
 };
 
-chrome.storage.onChanged.addListener((changes, area) => {
+chrome.storage.onChanged.addListener((changes) => {
   for (const key in changes) {
     const { oldValue, newValue } = changes[key];
     if (key === "font-family") {

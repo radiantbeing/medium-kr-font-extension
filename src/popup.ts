@@ -1,5 +1,6 @@
 import { Font, fonts } from "./libs/fonts";
 import { log } from "./libs/log";
+import { Settings, getSettings, setSettings } from "./libs/settings";
 
 /**
  * `root` 요소에 팝업 UI를 렌더링합니다.
@@ -17,6 +18,7 @@ const render = () => {
   const _root = document.getElementById("root");
   const _sansSerifOptions = generateOptions("sans-serif");
   const _serifOptions = generateOptions("serif");
+  const version = chrome.runtime.getManifest().version;
 
   _root.innerHTML = /* HTML */ `
     <main>
@@ -43,7 +45,7 @@ const render = () => {
         <input type="submit" value="적용" />
       </form>
       <footer>
-        <span>버전 ${chrome.runtime.getManifest().version}</span>
+        <span>버전 ${version}</span>
         <a
           href="https://github.com/radiantbeing/medium-kr-font-extension"
           target="_blank"
@@ -58,37 +60,37 @@ const render = () => {
 /**
  * 양식 제출 이벤트 핸들러를 추가합니다.
  */
-const addFormSubmitHandler = async () => {
+const addFormSubmitHandler = async (): Promise<void> => {
   const _form = document.querySelector("form");
 
   _form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
-    const config = Object.fromEntries(
+    const settings = Object.fromEntries(
       formData as unknown as [string, string][]
     );
-    await chrome.storage.sync.set(config);
-    log.info("설정이 저장되었습니다.", config);
+    await setSettings(settings);
+    log.info("설정이 저장되었습니다.", settings);
   });
 };
 
 /**
  * Storage에 저장된 설정으로부터 양식 값을 복원합니다.
- * @returns {Promise<void>}
  */
-const restoreFormValue = async () => {
+const restoreFormValue = async (): Promise<void> => {
   const _form = document.querySelector("form");
-  const config = await chrome.storage.sync.get();
-  const isEmpty = Object.keys(config).length === 0;
+  const settings = await getSettings();
+  const isEmpty = Object.keys(settings).length === 0;
 
   if (isEmpty) {
-    log.info("저장된 설정이 없습니다.", config);
+    log.info("저장된 설정이 없습니다.", settings);
     return;
   }
-  for (const key in config) {
-    _form[key].value = config[key];
+  for (const key in settings) {
+    const formKey = key as keyof Settings;
+    _form[formKey].value = settings[formKey];
   }
-  log.info("설정이 복원되었습니다.", config);
+  log.info("설정이 복원되었습니다.", settings);
 };
 
 /**
