@@ -1,10 +1,10 @@
 @import url("./fonts/Tinos/Tinos.css");
 
 :root {
-  --color-black: #0f0f0f;
-  --color-gray: #878d91;
-  --color-lightgray: #a9afb3;
-  --color-blue: #4c80f1;
+  --color-black: #242424;
+  --color-gray: #6b6b6b;
+  --color-accent: #1a8917;
+  --color-dark-accent: #156d12;
 }
 
 * {
@@ -25,7 +25,11 @@ main > p {
 }
 
 a {
-  color: var(--color-blue);
+  color: var(--color-gray);
+}
+
+a:hover {
+  color: var(--color-black);
 }
 
 header {
@@ -47,6 +51,10 @@ header > h1 {
   white-space: nowrap;
 }
 
+fieldset {
+  border: 1px solid var(--color-black);
+}
+
 label {
   display: flex;
   flex-direction: column;
@@ -57,19 +65,15 @@ input[type="submit"] {
   margin-top: 12px;
   padding: 8px 16px;
   color: #ffffff;
-  background-color: var(--color-black);
-  border-style: none;
-  border-radius: 8px;
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 99em;
   cursor: pointer;
-  transition: background-color 150ms;
 }
 
 input[type="submit"]:hover {
-  background-color: var(--color-gray);
-}
-
-input[type="submit"]:active {
-  background-color: var(--color-lightgray);
+  background-color: var(--color-dark-accent);
+  border-color: var(--color-dark-accent);
 }
 
 footer {
