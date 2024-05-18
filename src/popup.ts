@@ -1,12 +1,12 @@
-import { Typeface, typefaces } from "./libs/typefaces";
+import { Font, fonts } from "./libs/fonts";
 
 /**
  * `root` 요소에 팝업 UI를 렌더링합니다.
  */
 const render = () => {
-  const generateOptions = (style: Typeface["style"]) =>
-    typefaces
-      .filter((typeface) => typeface.style === style)
+  const generateOptions = (style: Font["style"]) =>
+    fonts
+      .filter((font) => font.style === style)
       .sort((a, b) => a.name.localeCompare(b.name))
       .map(
         ({ name, value }) =>
@@ -27,7 +27,7 @@ const render = () => {
         <fieldset>
           <legend>환경 설정</legend>
           <label>
-            서체
+            글꼴
             <select name="font-family">
               <option value="">설정 안 함</option>
               <optgroup label="시스템 기본값">

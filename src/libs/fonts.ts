@@ -1,10 +1,10 @@
-export type Typeface = {
+export type Font = {
   name: string;
   value: string;
   style: "sans-serif" | "serif";
 };
 
-export const typefaces: Typeface[] = [
+export const fonts: Font[] = [
   {
     name: "IBM Plex Sans KR",
     value: "IBM Plex Sans KR",

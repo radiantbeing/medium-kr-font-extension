@@ -1,10 +1,10 @@
-import { Typeface } from "./libs/typefaces";
+import { Font } from "./libs/fonts";
 
 /**
- * 서체 스타일 요소를 문서 헤드에 추가합니다.
- * @param value 서체 값
+ * 글꼴 스타일 요소를 문서 헤드에 추가합니다.
+ * @param value 글꼴 값
  */
-const appendFontFamilyStyleElement = (value: Typeface["value"]) => {
+const appendFontFamilyStyleElement = (value: Font["value"]) => {
   const _style = document.createElement("style");
   _style.id = "mkrf-font-family-style";
   _style.textContent = /* CSS */ `
@@ -20,7 +20,7 @@ const appendFontFamilyStyleElement = (value: Typeface["value"]) => {
 };
 
 /**
- * 서체 스타일 요소를 문서 헤드에서 제거합니다.
+ * 글꼴 스타일 요소를 문서 헤드에서 제거합니다.
  */
 const removeFontFamilyStyleElement = () => {
   const _style = document.getElementById("mkrf-font-family-style");
@@ -30,7 +30,7 @@ const removeFontFamilyStyleElement = () => {
 };
 
 /**
- * 저장된 서체를 적용합니다.
+ * 저장된 글꼴을 적용합니다.
  */
 const applyStoredFontFamily = async () => {
   const config = await chrome.storage.sync.get();

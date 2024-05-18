@@ -1,6 +1,6 @@
 # Medium KR Font
 
-본 Chrome 확장 프로그램은 온라인 출판 플랫폼 [Medium](https://medium.com)에서 [OFL](https://openfontlicense.org/) 한글 서체를 사용할 수 있게 합니다.
+본 Chrome 확장 프로그램은 온라인 출판 플랫폼 [Medium](https://medium.com)에서 [OFL](https://openfontlicense.org/) 한글 글꼴을 사용할 수 있게 합니다.
 
 [Chrome 웹 스토어](https://chromewebstore.google.com/detail/medium-kr-font/lkbbjppklcnjoigfnlhmnommkjkbjdgf)
 
@@ -13,7 +13,7 @@
 
 ![Medium 스토리 캡처](./docs/capture.png)
 
-## 지원 서체 목록
+## 지원 글꼴 목록
 
 **Sans Serif**
 
@@ -32,7 +32,7 @@
 
 **Monospace**
 
-> 코드 블록 및 인라인 코드에 아래와 같은 고정폭 서체가 자동으로 적용됩니다.
+> 코드 블록 및 인라인 코드에 아래와 같은 고정폭 글꼴이 자동으로 적용됩니다.
 
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 - [D2Coding](https://github.com/naver/d2codingfont/)

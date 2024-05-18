@@ -2,7 +2,7 @@
   font-family: "Nanum Barun Gothic";
   font-weight: 100;
   font-display: swap;
-  src: url("chrome-extension://__MSG_@@extension_id__/typefaces/NanumBarunGothic/NanumBarunGothicUltraLight.woff2")
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumBarunGothic/NanumBarunGothicUltraLight.woff2")
     format("woff2");
 }
 
@@ -10,7 +10,7 @@
   font-family: "Nanum Barun Gothic";
   font-weight: 300;
   font-display: swap;
-  src: url("chrome-extension://__MSG_@@extension_id__/typefaces/NanumBarunGothic/NanumBarunGothicLight.woff2")
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumBarunGothic/NanumBarunGothicLight.woff2")
     format("woff2");
 }
 
@@ -18,7 +18,7 @@
   font-family: "Nanum Barun Gothic";
   font-weight: 400;
   font-display: swap;
-  src: url("chrome-extension://__MSG_@@extension_id__/typefaces/NanumBarunGothic/NanumBarunGothic.woff2")
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumBarunGothic/NanumBarunGothic.woff2")
     format("woff2");
 }
 
@@ -26,6 +26,6 @@
   font-family: "Nanum Barun Gothic";
   font-weight: 700;
   font-display: swap;
-  src: url("chrome-extension://__MSG_@@extension_id__/typefaces/NanumBarunGothic/NanumBarunGothicBold.woff2")
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumBarunGothic/NanumBarunGothicBold.woff2")
     format("woff2");
 }

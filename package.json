@@ -1,7 +1,7 @@
 {
   "name": "medium-kr-font-extension",
   "version": "1.0.5",
-  "description": "아름다운 한글 서체로 새롭게 즐기는 Medium",
+  "description": "아름다운 한글 글꼴로 새롭게 즐기는 Medium",
   "scripts": {
     "watch": "webpack --mode=development --watch",
     "build": "webpack --mode=production"
