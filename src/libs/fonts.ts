@@ -23,7 +23,7 @@ export const fonts: Font[] = [
   },
   { value: "Nanum Gothic", name: "나눔고딕", style: "sans-serif" },
   {
-    value: "NanumSquare Neo variable",
+    value: "NanumSquareNeo",
     name: "나눔스퀘어 네오",
     style: "sans-serif",
   },
