@@ -15,22 +15,23 @@
 
 ## 지원 글꼴 목록
 
-**Sans Serif**
+### Sans Serif
 
 - [IBM Plex Sans KR](https://www.ibm.com/plex/)
 - [Nanum Barun Gothic](https://hangeul.naver.com/font/)
 - [Nanum Gothic](https://hangeul.naver.com/font/)
-- [NanumSquare Neo Variable](https://hangeul.naver.com/font/)
+- [NanumSquare Neo](https://hangeul.naver.com/font/)
 - [Noto Sans KR](https://fonts.google.com/noto/)
 - [Pretendard Variable](https://cactus.tistory.com/306/)
 - [Spoqa Han Sans Neo](https://spoqa.github.io/spoqa-han-sans/)
 
-**Serif**
+### Serif
 
+- [Maru Buri](https://hangeul.naver.com/font/)
 - [Noto Serif KR](https://fonts.google.com/noto/)
 - [RIDIBatang](https://ridicorp.com/ridibatang/)
 
-**Monospace**
+### Monospace
 
 > 코드 블록 및 인라인 코드에 아래와 같은 고정폭 글꼴이 자동으로 적용됩니다.
 
