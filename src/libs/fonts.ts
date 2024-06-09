@@ -17,6 +17,11 @@ export const fonts: Font[] = [
     style: "sans-serif",
   },
   {
+    value: "LINE Seed KR",
+    name: "LINE Seed KR",
+    style: "sans-serif",
+  },
+  {
     value: "Nanum Barun Gothic",
     name: "나눔바른고딕",
     style: "sans-serif",
