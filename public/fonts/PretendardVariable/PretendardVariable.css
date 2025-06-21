@@ -8,9 +8,9 @@ http://scripts.sil.org/OFL
 */
 
 @font-face {
-  font-family: "Pretendard Variable";
-  font-weight: 45 920;
-  font-display: swap;
-  src: url("chrome-extension://__MSG_@@extension_id__/fonts/PretendardVariable/PretendardVariable.woff2")
-    format("woff2-variations");
+    font-family: "Pretendard Variable";
+    font-weight: 45 920;
+    font-display: swap;
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/PretendardVariable/PretendardVariable.woff2")
+        format("woff2-variations");
 }

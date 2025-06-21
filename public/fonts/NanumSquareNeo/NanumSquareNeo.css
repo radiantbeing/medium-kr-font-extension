@@ -1,39 +1,39 @@
 @font-face {
-  font-family: "NanumSquare Neo";
-  font-weight: 300;
-  font-display: swap;
-  src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumSquareNeo/NanumSquareNeoOTF-Lt.woff2")
-    format("woff2");
+    font-family: "NanumSquare Neo";
+    font-weight: 300;
+    font-display: swap;
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumSquareNeo/NanumSquareNeoOTF-Lt.woff2")
+        format("woff2");
 }
 
 @font-face {
-  font-family: "NanumSquare Neo";
-  font-weight: 400;
-  font-display: swap;
-  src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumSquareNeo/NanumSquareNeoOTF-Rg.woff2")
-    format("woff2");
+    font-family: "NanumSquare Neo";
+    font-weight: 400;
+    font-display: swap;
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumSquareNeo/NanumSquareNeoOTF-Rg.woff2")
+        format("woff2");
 }
 
 @font-face {
-  font-family: "NanumSquare Neo";
-  font-weight: 700;
-  font-display: swap;
-  src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumSquareNeo/NanumSquareNeoOTF-Bd.woff2")
-    format("woff2");
+    font-family: "NanumSquare Neo";
+    font-weight: 700;
+    font-display: swap;
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumSquareNeo/NanumSquareNeoOTF-Bd.woff2")
+        format("woff2");
 }
 
 @font-face {
-  font-family: "NanumSquare Neo";
-  font-weight: 800;
-  font-display: swap;
-  src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumSquareNeo/NanumSquareNeoOTF-Eb.woff2")
-    format("woff2");
+    font-family: "NanumSquare Neo";
+    font-weight: 800;
+    font-display: swap;
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumSquareNeo/NanumSquareNeoOTF-Eb.woff2")
+        format("woff2");
 }
 
 @font-face {
-  font-family: "NanumSquare Neo";
-  font-weight: 900;
-  font-display: swap;
-  src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumSquareNeo/NanumSquareNeoOTF-Hv.woff2")
-    format("woff2");
+    font-family: "NanumSquare Neo";
+    font-weight: 900;
+    font-display: swap;
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumSquareNeo/NanumSquareNeoOTF-Hv.woff2")
+        format("woff2");
 }

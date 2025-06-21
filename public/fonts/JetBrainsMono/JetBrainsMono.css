@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "JetBrains Mono";
-  font-style: italic;
-  font-weight: 100 800;
-  font-display: swap;
-  src: url("chrome-extension://__MSG_@@extension_id__/fonts/JetBrainsMono/JetBrainsMonoItalicVariable.woff2")
-    format("woff2");
+    font-family: "JetBrains Mono";
+    font-style: italic;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/JetBrainsMono/JetBrainsMonoItalicVariable.woff2")
+        format("woff2");
 }
 
 @font-face {
-  font-family: "JetBrains Mono";
-  font-style: normal;
-  font-weight: 100 800;
-  font-display: swap;
-  src: url("chrome-extension://__MSG_@@extension_id__/fonts/JetBrainsMono/JetBrainsMonoVariable.woff2")
-    format("woff2");
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/JetBrainsMono/JetBrainsMonoVariable.woff2")
+        format("woff2");
 }

@@ -1,84 +1,84 @@
 @import url("./fonts/Tinos/Tinos.css");
 
 :root {
-  --color-black: #242424;
-  --color-gray: #6b6b6b;
-  --color-accent: #1a8917;
-  --color-dark-accent: #156d12;
+    --color-black: #242424;
+    --color-gray: #6b6b6b;
+    --color-accent: #1a8917;
+    --color-dark-accent: #156d12;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  color: var(--color-black);
+    margin: 0;
+    color: var(--color-black);
 }
 
 main {
-  padding: 12px;
+    padding: 12px;
 }
 
 main > p {
-  word-break: keep-all;
+    word-break: keep-all;
 }
 
 a {
-  color: var(--color-gray);
+    color: var(--color-gray);
 }
 
 a:hover {
-  color: var(--color-black);
+    color: var(--color-black);
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 8px;
-  margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 header > img {
-  width: 28px;
-  height: 28px;
+    width: 28px;
+    height: 28px;
 }
 
 header > h1 {
-  font-family: "Tinos", serif;
-  font-size: 1.2rem;
-  white-space: nowrap;
+    font-family: "Tinos", serif;
+    font-size: 1.2rem;
+    white-space: nowrap;
 }
 
 fieldset {
-  border: 1px solid var(--color-gray);
+    border: 1px solid var(--color-gray);
 }
 
 label {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 input[type="submit"] {
-  margin-top: 12px;
-  padding: 8px 16px;
-  color: #ffffff;
-  background-color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-  border-radius: 99em;
-  cursor: pointer;
+    margin-top: 12px;
+    padding: 8px 16px;
+    color: #ffffff;
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    border-radius: 99em;
+    cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background-color: var(--color-dark-accent);
-  border-color: var(--color-dark-accent);
+    background-color: var(--color-dark-accent);
+    border-color: var(--color-dark-accent);
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  font-size: small;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: small;
 }

@@ -1,52 +1,52 @@
 {
-  "manifest_version": 3,
-  "name": "Medium KR Font",
-  "description": "아름다운 한글 글꼴로 새롭게 즐기는 Medium",
-  "version": "1.0.8",
-  "icons": {
-    "16": "images/icon-16.png",
-    "32": "images/icon-32.png",
-    "48": "images/icon-48.png",
-    "128": "images/icon-128.png"
-  },
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "images/icon-16.png",
-      "32": "images/icon-32.png",
-      "48": "images/icon-48.png",
-      "128": "images/icon-128.png"
-    }
-  },
-  "content_scripts": [
-    {
-      "matches": ["https://*.medium.com/*"],
-      "css": [
-        "fonts/D2Coding/D2Coding.css",
-        "fonts/JetBrainsMono/JetBrainsMono.css",
-        "fonts/LineSeedKR/LINESeedKR.css",
-        "fonts/MaruBuri/MaruBuri.css",
-        "fonts/IBMPlexSansKR/IBMPlexSansKR.css",
-        "fonts/NanumBarunGothic/NanumBarunGothic.css",
-        "fonts/NanumGothic/NanumGothic.css",
-        "fonts/NanumSquareNeo/NanumSquareNeo.css",
-        "fonts/NotoSansKR/NotoSansKR.css",
-        "fonts/NotoSerifKR/NotoSerifKR.css",
-        "fonts/PretendardVariable/PretendardVariable.css",
-        "fonts/RIDIBatang/RIDIBatang.css",
-        "fonts/SpoqaHanSansNeo/SpoqaHanSansNeo.css"
-      ],
-      "js": ["content-script.bundle.js"]
-    }
-  ],
-  "background": {
-    "service_worker": "service-worker.bundle.js"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": ["fonts/*"],
-      "matches": ["https://*.medium.com/*"]
-    }
-  ],
-  "permissions": ["storage", "activeTab"]
+    "manifest_version": 3,
+    "name": "Medium KR Font",
+    "description": "아름다운 한글 글꼴로 새롭게 즐기는 Medium",
+    "version": "1.0.8",
+    "icons": {
+        "16": "images/icon-16.png",
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon-16.png",
+            "32": "images/icon-32.png",
+            "48": "images/icon-48.png",
+            "128": "images/icon-128.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.medium.com/*"],
+            "css": [
+                "fonts/D2Coding/D2Coding.css",
+                "fonts/JetBrainsMono/JetBrainsMono.css",
+                "fonts/LineSeedKR/LINESeedKR.css",
+                "fonts/MaruBuri/MaruBuri.css",
+                "fonts/IBMPlexSansKR/IBMPlexSansKR.css",
+                "fonts/NanumBarunGothic/NanumBarunGothic.css",
+                "fonts/NanumGothic/NanumGothic.css",
+                "fonts/NanumSquareNeo/NanumSquareNeo.css",
+                "fonts/NotoSansKR/NotoSansKR.css",
+                "fonts/NotoSerifKR/NotoSerifKR.css",
+                "fonts/PretendardVariable/PretendardVariable.css",
+                "fonts/RIDIBatang/RIDIBatang.css",
+                "fonts/SpoqaHanSansNeo/SpoqaHanSansNeo.css"
+            ],
+            "js": ["content-script.bundle.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "service-worker.bundle.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["fonts/*"],
+            "matches": ["https://*.medium.com/*"]
+        }
+    ],
+    "permissions": ["storage", "activeTab"]
 }
