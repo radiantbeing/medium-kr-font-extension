@@ -12,6 +12,17 @@ const configs: RollupOptions[] = [
       format: "iife",
       sourcemap: "inline",
     },
+
+    // `watch.include` 프로퍼티에 `public` 디렉터리를 포함하더라도 내용물의 변경을 감지하지
+    // 못합니다. `watch.include`는 모듈 그래프만 필터링할 뿐, 감시할 파일을 추가하지 않습니다.
+    //
+    //     watch: {
+    //         include: ["public/**"], ← 추가로 감시하지 않습니다.
+    //     },
+    //
+    // 따라서 `public` 디렉터리 내의 변경 사항을 적용하려면, `npm run watch` 명령을
+    // 재실행해야 합니다.
+
     plugins: [
       del({ targets: "dist" }),
       copy({
