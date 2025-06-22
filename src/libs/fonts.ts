@@ -47,6 +47,16 @@ export const fonts: Font[] = [
         name: "스포카 한 산스 네오",
         style: "sans-serif"
     },
+    {
+        value: "Kakao Big Sans",
+        name: "카카오 큰글씨",
+        style: "sans-serif"
+    },
+    {
+        value: "Kakao Small Sans",
+        name: "카카오 작은글씨",
+        style: "sans-serif"
+    },
     {value: "Maru Buri", name: "마루 부리", style: "serif"},
     {value: "Noto Serif KR", name: "Noto Serif Korean", style: "serif"},
     {value: "RIDIBatang", name: "리디바탕", style: "serif"}

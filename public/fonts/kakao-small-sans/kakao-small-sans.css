@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Kakao Small Sans";
+    font-weight: 300;
+    font-display: swap;
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/kakao-small-sans/kakao-small-sans-light.woff2")
+        format("woff2");
+}
+
+@font-face {
+    font-family: "Kakao Small Sans";
+    font-weight: 400;
+    font-display: swap;
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/kakao-small-sans/kakao-small-sans-regular.woff2")
+        format("woff2");
+}
+
+@font-face {
+    font-family: "Kakao Small Sans";
+    font-weight: 700;
+    font-display: swap;
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/kakao-small-sans/kakao-small-sans-bold.woff2")
+        format("woff2");
+}
