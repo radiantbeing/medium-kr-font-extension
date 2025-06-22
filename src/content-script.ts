@@ -10,11 +10,11 @@ const appendFontFamilyStyleElement = (value: Font["value"]) => {
     _style.id = "mkrf-font-family-style";
     _style.textContent = /* CSS */ `
     * {
-        font-family: ${value} !important; 
+        font-family: ${value} !important;
     }
-    pre *, 
+    pre *,
     code {
-        font-family: "JetBrains Mono", "D2Coding", monospace !important; 
+        font-family: "JetBrains Mono", "D2Coding", monospace !important;
     }
   `;
     document.head.appendChild(_style);
@@ -47,7 +47,7 @@ const applyStoredFontFamily = async () => {
 
 chrome.storage.onChanged.addListener((changes) => {
     for (const key in changes) {
-        const {oldValue, newValue} = changes[key];
+        const {newValue} = changes[key];
         if (key === "font-family") {
             if (newValue === "") {
                 removeFontFamilyStyleElement();

@@ -5,7 +5,7 @@ import {getSettings, setSettings} from "./libs/settings";
  */
 chrome.runtime.onInstalled.addListener(async () => {
     const settings = await getSettings();
-    if (!settings.hasOwnProperty("font-family")) {
+    if (!Object.prototype.hasOwnProperty.call(settings, "font-family")) {
         await setSettings({"font-family": ""});
     }
 });
