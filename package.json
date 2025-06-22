@@ -23,7 +23,6 @@
         "@types/chrome": "^0.0.268",
         "eslint": "^9.29.0",
         "eslint-config-prettier": "^10.1.5",
-        "eslint-plugin-react": "^7.37.5",
         "globals": "^16.2.0",
         "jiti": "^2.4.2",
         "rollup": "^4.44.0",
