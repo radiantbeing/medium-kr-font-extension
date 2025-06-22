@@ -2,7 +2,7 @@
     font-family: "Maru Buri";
     font-weight: 100;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/MaruBuri/MaruBuri-ExtraLight.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/maru-buri/maru-buri-extralight.woff2")
         format("woff2");
 }
 
@@ -10,7 +10,7 @@
     font-family: "Maru Buri";
     font-weight: 300;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/MaruBuri/MaruBuri-Light.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/maru-buri/maru-buri-light.woff2")
         format("woff2");
 }
 
@@ -18,7 +18,7 @@
     font-family: "Maru Buri";
     font-weight: 400;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/MaruBuri/MaruBuri-Regular.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/maru-buri/maru-buri-regular.woff2")
         format("woff2");
 }
 
@@ -26,7 +26,7 @@
     font-family: "Maru Buri";
     font-weight: 500;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/MaruBuri/MaruBuri-SemiBold.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/maru-buri/maru-buri-semibold.woff2")
         format("woff2");
 }
 
@@ -34,6 +34,6 @@
     font-family: "Maru Buri";
     font-weight: 700;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/MaruBuri/MaruBuri-Bold.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/maru-buri/maru-buri-bold.woff2")
         format("woff2");
 }

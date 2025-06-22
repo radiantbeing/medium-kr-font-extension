@@ -2,6 +2,6 @@
     font-family: "RIDIBatang";
     font-weight: 400;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/RIDIBatang/RIDIBatang.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/ridi-batang/ridi-batang-regular.woff2")
         format("woff2");
 }

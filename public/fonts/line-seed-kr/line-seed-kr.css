@@ -2,7 +2,7 @@
     font-family: "LINE Seed KR";
     font-weight: 100;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/LineSeedKR/LINESeedKR-Th.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/line-seed-kr/line-seed-kr-thin.woff2")
         format("woff2");
 }
 
@@ -10,7 +10,7 @@
     font-family: "LINE Seed KR";
     font-weight: 400;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/LineSeedKR/LINESeedKR-Rg.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/line-seed-kr/line-seed-kr-regular.woff2")
         format("woff2");
 }
 
@@ -18,6 +18,6 @@
     font-family: "LINE Seed KR";
     font-weight: 700;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/LineSeedKR/LINESeedKR-Bd.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/line-seed-kr/line-seed-kr-bold.woff2")
         format("woff2");
 }

@@ -3,7 +3,7 @@
     font-style: italic;
     font-weight: 100 800;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/JetBrainsMono/JetBrainsMonoItalicVariable.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/jet-brains-mono/jet-brains-mono-italic-variable.woff2")
         format("woff2");
 }
 
@@ -12,6 +12,6 @@
     font-style: normal;
     font-weight: 100 800;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/JetBrainsMono/JetBrainsMonoVariable.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/jet-brains-mono/jet-brains-mono-variable.woff2")
         format("woff2");
 }

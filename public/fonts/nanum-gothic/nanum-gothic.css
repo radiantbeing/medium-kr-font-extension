@@ -2,7 +2,7 @@
     font-family: "Nanum Gothic";
     font-weight: 400;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumGothic/NanumGothic-Regular.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/nanum-gothic/nanum-gothic-regular.woff2")
         format("woff2");
 }
 
@@ -10,7 +10,7 @@
     font-family: "Nanum Gothic";
     font-weight: 700;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumGothic/NanumGothic-Bold.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/nanum-gothic/nanum-gothic-bold.woff2")
         format("woff2");
 }
 
@@ -18,6 +18,6 @@
     font-family: "Nanum Gothic";
     font-weight: 800;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NanumGothic/NanumGothic-ExtraBold.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/nanum-gothic/nanum-gothic-extrabold.woff2")
         format("woff2");
 }

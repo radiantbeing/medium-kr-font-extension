@@ -2,7 +2,7 @@
     font-family: "Noto Serif KR";
     font-weight: 200;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-ExtraLight.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/noto-serif-kr/noto-serif-kr-extralight.woff2")
         format("woff2");
 }
 
@@ -10,7 +10,7 @@
     font-family: "Noto Serif KR";
     font-weight: 300;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-Light.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/noto-serif-kr/noto-serif-kr-light.woff2")
         format("woff2");
 }
 
@@ -18,7 +18,7 @@
     font-family: "Noto Serif KR";
     font-weight: 400;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-Regular.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/noto-serif-kr/noto-serif-kr-regular.woff2")
         format("woff2");
 }
 
@@ -26,7 +26,7 @@
     font-family: "Noto Serif KR";
     font-weight: 500;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-Medium.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/noto-serif-kr/noto-serif-kr-medium.woff2")
         format("woff2");
 }
 
@@ -34,7 +34,7 @@
     font-family: "Noto Serif KR";
     font-weight: 600;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-SemiBold.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/noto-serif-kr/noto-serif-kr-semibold.woff2")
         format("woff2");
 }
 
@@ -42,7 +42,7 @@
     font-family: "Noto Serif KR";
     font-weight: 700;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-Bold.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/noto-serif-kr/noto-serif-kr-bold.woff2")
         format("woff2");
 }
 
@@ -50,6 +50,6 @@
     font-family: "Noto Serif KR";
     font-weight: 900;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/NotoSerifKR/NotoSerifKR-Black.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/noto-serif-kr/noto-serif-kr-black.woff2")
         format("woff2");
 }

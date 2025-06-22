@@ -2,7 +2,7 @@
     font-family: "D2Coding";
     font-weight: 400;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/D2Coding/D2Coding.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/d2coding/d2coding-regular.woff2")
         format("woff2");
 }
 
@@ -10,6 +10,6 @@
     font-family: "D2Coding";
     font-weight: 700;
     font-display: swap;
-    src: url("chrome-extension://__MSG_@@extension_id__/fonts/D2Coding/D2CodingBold.woff2")
+    src: url("chrome-extension://__MSG_@@extension_id__/fonts/d2coding/d2coding-bold.woff2")
         format("woff2");
 }
