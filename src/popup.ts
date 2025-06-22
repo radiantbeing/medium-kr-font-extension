@@ -12,7 +12,9 @@ const isMediumDomain = async () => {
         lastFocusedWindow: true
     });
     const currentTab = tabs[0];
-    return currentTab.url.includes("medium.com");
+    return currentTab.url === undefined
+        ? false
+        : currentTab.url.includes("medium.com");
 };
 
 /**
@@ -34,6 +36,9 @@ const render = async () => {
     const _sansSerifOptions = generateOptions("sans-serif");
     const _serifOptions = generateOptions("serif");
 
+    if (_root === null) {
+        return;
+    }
     _root.innerHTML = /* HTML */ `
         <main>
             <header>
@@ -80,6 +85,9 @@ const render = async () => {
 const addFormSubmitHandler = async (): Promise<void> => {
     const _form = document.querySelector("form");
 
+    if (_form === null) {
+        return;
+    }
     _form.addEventListener("submit", async (e) => {
         e.preventDefault();
         const formData = new FormData(e.target as HTMLFormElement);
@@ -99,6 +107,9 @@ const restoreFormValue = async (): Promise<void> => {
     const settings = await getSettings();
     const isEmpty = Object.keys(settings).length === 0;
 
+    if (_form === null) {
+        return;
+    }
     if (isEmpty) {
         log.info("저장된 설정이 없습니다.", settings);
         return;
