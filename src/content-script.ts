@@ -1,5 +1,5 @@
-import {Font} from "./libs/fonts";
-import {getSettings} from "./libs/settings";
+import {Font} from "./lib/fonts";
+import {getSettings} from "./lib/settings";
 
 /**
  * 글꼴 스타일 요소를 문서 헤드에 추가합니다.

@@ -1,6 +1,6 @@
-import {Font, fonts} from "./libs/fonts";
-import {log} from "./libs/log";
-import {Settings, getSettings, setSettings} from "./libs/settings";
+import {Font, fonts} from "./lib/fonts";
+import {log} from "./lib/log";
+import {Settings, getSettings, setSettings} from "./lib/settings";
 
 /**
  * 현재 탭이 Medium인지 확인합니다.
