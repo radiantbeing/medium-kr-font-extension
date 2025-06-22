@@ -17,7 +17,7 @@ const configs: RollupOptions[] = [
         // 못합니다. `watch.include`는 모듈 그래프만 필터링할 뿐, 감시할 파일을 추가하지 않습니다.
         //
         //     watch: {
-        //         include: ["public/**"], ← 추가로 감시하지 않습니다.
+        //         include: ["public/*"], ← 추가로 감시하지 않습니다.
         //     },
         //
         // 따라서 `public` 디렉터리 내의 변경 사항을 적용하려면, `npm run watch` 명령을
@@ -26,7 +26,7 @@ const configs: RollupOptions[] = [
         plugins: [
             del({targets: "dist"}),
             copy({
-                targets: [{src: "public/**.*", dest: "dist"}]
+                targets: [{src: "public/*", dest: "dist"}]
             }),
             typescript(),
             terser()
