@@ -1,0 +1,80 @@
+[
+    {
+        "value": "IBM Plex Sans KR",
+        "name": "IBM Plex Sans KR",
+        "style": "sans-serif",
+        "cssPath": "fonts/ibm-plex-sans-kr/ibm-plex-sans-kr.css"
+    },
+    {
+        "value": "LINE Seed KR",
+        "name": "LINE Seed KR",
+        "style": "sans-serif",
+        "cssPath": "fonts/line-seed-kr/line-seed-kr.css"
+    },
+    {
+        "value": "Nanum Barun Gothic",
+        "name": "나눔바른고딕",
+        "style": "sans-serif",
+        "cssPath": "fonts/nanum-barun-gothic/nanum-barun-gothic.css"
+    },
+    {
+        "value": "Nanum Gothic",
+        "name": "나눔고딕",
+        "style": "sans-serif",
+        "cssPath": "fonts/nanum-gothic/nanum-gothic.css"
+    },
+    {
+        "value": "NanumSquare Neo",
+        "name": "나눔스퀘어 네오",
+        "style": "sans-serif",
+        "cssPath": "fonts/nanum-square-neo/nanum-square-neo.css"
+    },
+    {
+        "value": "Noto Sans KR",
+        "name": "Noto Sans Korean",
+        "style": "sans-serif",
+        "cssPath": "fonts/noto-sans-kr/noto-sans-kr.css"
+    },
+    {
+        "value": "Pretendard Variable",
+        "name": "Pretendard",
+        "style": "sans-serif",
+        "cssPath": "fonts/pretendard/pretendard.css"
+    },
+    {
+        "value": "Spoqa Han Sans Neo",
+        "name": "스포카 한 산스 네오",
+        "style": "sans-serif",
+        "cssPath": "fonts/spoqa-han-sans-neo/spoqa-han-sans-neo.css"
+    },
+    {
+        "value": "Kakao Big Sans",
+        "name": "카카오 큰글씨",
+        "style": "sans-serif",
+        "cssPath": "fonts/kakao-big-sans/kakao-big-sans.css"
+    },
+    {
+        "value": "Kakao Small Sans",
+        "name": "카카오 작은글씨",
+        "style": "sans-serif",
+        "cssPath": "fonts/kakao-small-sans/kakao-small-sans.css"
+    },
+    {
+        "value": "Maru Buri",
+        "name": "마루 부리",
+        "style": "serif",
+        "cssPath": "fonts/maru-buri/maru-buri.css"
+    },
+    {
+        "value": "Noto Serif KR",
+        "name": "Noto Serif Korean",
+        "style": "serif",
+        "cssPath": "fonts/noto-serif-kr/noto-serif-kr.css"
+    },
+    {
+        "value": "RIDIBatang",
+        "name": "리디바탕",
+        "style": "serif",
+        "cssPath": "fonts/ridi-batang/ridi-batang.css"
+    }
+]

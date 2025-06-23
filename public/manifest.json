@@ -21,23 +21,6 @@
     "content_scripts": [
         {
             "matches": ["https://*.medium.com/*"],
-            "css": [
-                "fonts/d2coding/d2coding.css",
-                "fonts/ibm-plex-sans-kr/ibm-plex-sans-kr.css",
-                "fonts/jet-brains-mono/jet-brains-mono.css",
-                "fonts/kakao-big-sans/kakao-big-sans.css",
-                "fonts/kakao-small-sans/kakao-small-sans.css",
-                "fonts/line-seed-kr/line-seed-kr.css",
-                "fonts/maru-buri/maru-buri.css",
-                "fonts/nanum-barun-gothic/nanum-barun-gothic.css",
-                "fonts/nanum-gothic/nanum-gothic.css",
-                "fonts/nanum-square-neo/nanum-square-neo.css",
-                "fonts/noto-sans-kr/noto-sans-kr.css",
-                "fonts/noto-serif-kr/noto-serif-kr.css",
-                "fonts/pretendard/pretendard.css",
-                "fonts/ridi-batang/ridi-batang.css",
-                "fonts/spoqa-han-sans-neo/spoqa-han-sans-neo.css"
-            ],
             "js": ["content-script.js"]
         }
     ],

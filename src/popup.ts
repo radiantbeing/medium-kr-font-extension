@@ -1,5 +1,5 @@
-import {Font, fonts} from "./lib/fonts";
-import {log} from "./lib/log";
+import font, {type Font} from "./lib/font";
+import log from "./lib/log";
 import {Settings, getSettings, setSettings} from "./lib/settings";
 
 /**
@@ -21,20 +21,24 @@ const isMediumDomain = async () => {
  * `root` 요소에 팝업 UI를 렌더링합니다.
  */
 const render = async () => {
-    const generateOptions = (style: Font["style"]) =>
-        fonts
+    const fonts = await font.getAll();
+
+    async function generateOptions(style: Font["style"]) {
+        return fonts
             .filter((font) => font.style === style)
             .sort((a, b) => a.name.localeCompare(b.name))
             .map(
                 ({value, name}) =>
                     /* HTML */ `<option value="${value}">${name}</option>`
             );
+    }
+
     const version = chrome.runtime.getManifest().version;
     const isMedium = await isMediumDomain();
     const helperText = isMedium ? "" : "접속 중인 사이트는 Medium이 아닙니다.";
     const _root = document.getElementById("root");
-    const _sansSerifOptions = generateOptions("sans-serif");
-    const _serifOptions = generateOptions("serif");
+    const _sansSerifOptions = await generateOptions("sans-serif");
+    const _serifOptions = await generateOptions("serif");
 
     if (_root === null) {
         return;

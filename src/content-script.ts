@@ -1,4 +1,5 @@
-import {Font} from "./lib/fonts";
+import dom from "./lib/dom";
+import font, {Font} from "./lib/font";
 import {getSettings} from "./lib/settings";
 
 /**
@@ -45,6 +46,20 @@ const applyStoredFontFamily = async () => {
     }
 };
 
+async function insertFontCSSs(): Promise<void> {
+    const fonts = await font.getAll();
+    const cssPaths = fonts.map((font) => font.cssPath);
+    const cssContents = await Promise.all(
+        cssPaths.map(async function (path) {
+            const response = await fetch(chrome.runtime.getURL(path));
+            return await response.text();
+        })
+    );
+    cssContents.forEach((css) => dom.insertCSS(css));
+}
+
+// Event Handlers:
+
 chrome.storage.onChanged.addListener((changes) => {
     for (const key in changes) {
         const {newValue} = changes[key];
@@ -59,4 +74,9 @@ chrome.storage.onChanged.addListener((changes) => {
     }
 });
 
-applyStoredFontFamily();
+// Main:
+
+(async function main() {
+    await insertFontCSSs();
+    applyStoredFontFamily();
+})();
