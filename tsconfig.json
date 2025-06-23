@@ -3,7 +3,6 @@
         "esModuleInterop": true,
         "module": "ESNext",
         "moduleResolution": "bundler",
-        "sourceMap": true,
         "strict": true,
         "target": "ES2020"
     }
