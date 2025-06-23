@@ -19,7 +19,7 @@ async function getSetting<K extends keyof Settings>(
 async function setSettingsV2<K extends keyof Settings>(
     name: K,
     value: Settings[K]
-) {
+): Promise<Settings[K]> {
     await chrome.storage.sync.set({[name]: value});
     return getSetting(name);
 }

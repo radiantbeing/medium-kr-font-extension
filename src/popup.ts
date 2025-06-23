@@ -7,7 +7,7 @@ import extensionSettings, {type Settings} from "./lib/settings";
  * @returns Medium URL 일치 여부
  */
 
-async function isMediumDomain() {
+async function isMediumDomain(): Promise<boolean> {
     const tabs = await chrome.tabs.query({
         active: true,
         lastFocusedWindow: true
@@ -19,10 +19,13 @@ async function isMediumDomain() {
 }
 
 /**
- * 글꼴 <select> 요소의 옵션 요소 배열을 반환합니다.
+ * 글꼴 <select> 요소에 포함될 <option> 문자열 배열을 반환합니다.
  */
 
-async function generateOptions(fonts: Font[], style: Font["style"]) {
+async function generateOptions(
+    fonts: Font[],
+    style: Font["style"]
+): Promise<string[]> {
     return fonts
         .filter((f) => f.style === style)
         .sort((a, b) => a.name.localeCompare(b.name))
@@ -36,7 +39,7 @@ async function generateOptions(fonts: Font[], style: Font["style"]) {
  * `root` 요소에 팝업 UI를 렌더링합니다.
  */
 
-async function render() {
+async function render(): Promise<void> {
     const version = chrome.runtime.getManifest().version;
     const isMedium = await isMediumDomain();
     const helperText = isMedium ? "" : "접속 중인 사이트는 Medium이 아닙니다.";

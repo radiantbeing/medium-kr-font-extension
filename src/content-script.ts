@@ -53,7 +53,7 @@ chrome.storage.onChanged.addListener(function (changes) {
 
 // 메인 함수:
 
-(async function main() {
+(async function main(): Promise<void> {
     await insertFontFaceCSSs();
 
     // 팝업에서 적용할 글꼴을 `설정 안 함`으로 설정했을 경우 Medium에서 사용할 폰트를 변경하는
