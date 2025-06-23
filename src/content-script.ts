@@ -1,52 +1,27 @@
 import dom from "./lib/dom";
-import font, {Font} from "./lib/font";
-import {getSettings} from "./lib/settings";
+import font, {type Font} from "./lib/font";
+import settings from "./lib/settings";
 
-/**
- * 글꼴 스타일 요소를 문서 헤드에 추가합니다.
- * @param value 글꼴 값
- */
-const appendFontFamilyStyleElement = (value: Font["value"]) => {
-    const _style = document.createElement("style");
-    _style.id = "mkrf-font-family-style";
-    _style.textContent = /* CSS */ `
+const FONT_CSS_ID = "mkrf-font-family-style";
+
+function insertFontCSS(font: Font["value"]): void {
+    const css = `
     * {
-        font-family: ${value} !important;
+        font-family: ${font} !important;
     }
     pre *,
     code {
         font-family: "JetBrains Mono", "D2Coding", monospace !important;
     }
   `;
-    document.head.appendChild(_style);
-};
+    dom.insertCSS(css, FONT_CSS_ID);
+}
 
-/**
- * 글꼴 스타일 요소를 문서 헤드에서 제거합니다.
- */
-const removeFontFamilyStyleElement = () => {
-    const _style = document.getElementById("mkrf-font-family-style");
-    if (_style) {
-        _style.remove();
-    }
-};
+function removeFontCSS(): void {
+    dom.removeCSS(FONT_CSS_ID);
+}
 
-/**
- * 저장된 글꼴을 적용합니다.
- */
-const applyStoredFontFamily = async () => {
-    const config = await getSettings();
-    for (const key in config) {
-        if (key === "font-family") {
-            const fontFamily = config[key];
-            if (fontFamily) {
-                appendFontFamilyStyleElement(fontFamily);
-            }
-        }
-    }
-};
-
-async function insertFontCSSs(): Promise<void> {
+async function insertFontFaceCSSs(): Promise<void> {
     const fonts = await font.getAll();
     const cssPaths = fonts.map((font) => font.cssPath);
     const cssContents = await Promise.all(
@@ -58,25 +33,34 @@ async function insertFontCSSs(): Promise<void> {
     cssContents.forEach((css) => dom.insertCSS(css));
 }
 
-// Event Handlers:
+// 이벤트 핸들러:
 
-chrome.storage.onChanged.addListener((changes) => {
-    for (const key in changes) {
-        const {newValue} = changes[key];
-        if (key === "font-family") {
-            if (newValue === "") {
-                removeFontFamilyStyleElement();
-            } else {
-                removeFontFamilyStyleElement();
-                appendFontFamilyStyleElement(newValue);
+chrome.storage.onChanged.addListener(function (changes) {
+    Object.entries(changes).forEach(function ([key, values]) {
+        switch (key) {
+            case "font-family": {
+                const newFont = values.newValue;
+                if (newFont === undefined || newFont === "") {
+                    removeFontCSS();
+                } else {
+                    removeFontCSS();
+                    insertFontCSS(newFont);
+                }
             }
         }
-    }
+    });
 });
 
-// Main:
+// 메인 함수:
 
 (async function main() {
-    await insertFontCSSs();
-    applyStoredFontFamily();
+    await insertFontFaceCSSs();
+
+    // 팝업에서 적용할 글꼴을 `설정 안 함`으로 설정했을 경우 Medium에서 사용할 폰트를 변경하는
+    // CSS를 삽입하지 않습니다.
+
+    const font = await settings.get("font-family");
+    if (font !== undefined && font !== "") {
+        insertFontCSS(font);
+    }
 })();
