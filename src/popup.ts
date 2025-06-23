@@ -1,12 +1,13 @@
 import font, {type Font} from "./lib/font";
 import log from "./lib/log";
-import {Settings, getSettings, setSettings} from "./lib/settings";
+import extensionSettings, {type Settings} from "./lib/settings";
 
 /**
  * 현재 탭이 Medium인지 확인합니다.
  * @returns Medium URL 일치 여부
  */
-const isMediumDomain = async () => {
+
+async function isMediumDomain() {
     const tabs = await chrome.tabs.query({
         active: true,
         lastFocusedWindow: true
@@ -15,30 +16,34 @@ const isMediumDomain = async () => {
     return currentTab.url === undefined
         ? false
         : currentTab.url.includes("medium.com");
-};
+}
+
+/**
+ * 글꼴 <select> 요소의 옵션 요소 배열을 반환합니다.
+ */
+
+async function generateOptions(fonts: Font[], style: Font["style"]) {
+    return fonts
+        .filter((f) => f.style === style)
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map(
+            ({value, name}) =>
+                /* HTML */ `<option value="${value}">${name}</option>`
+        );
+}
 
 /**
  * `root` 요소에 팝업 UI를 렌더링합니다.
  */
-const render = async () => {
-    const fonts = await font.getAll();
 
-    async function generateOptions(style: Font["style"]) {
-        return fonts
-            .filter((font) => font.style === style)
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map(
-                ({value, name}) =>
-                    /* HTML */ `<option value="${value}">${name}</option>`
-            );
-    }
-
+async function render() {
     const version = chrome.runtime.getManifest().version;
     const isMedium = await isMediumDomain();
     const helperText = isMedium ? "" : "접속 중인 사이트는 Medium이 아닙니다.";
+    const fonts = await font.getAll();
     const _root = document.getElementById("root");
-    const _sansSerifOptions = await generateOptions("sans-serif");
-    const _serifOptions = await generateOptions("serif");
+    const _sansSerifOptions = await generateOptions(fonts, "sans-serif");
+    const _serifOptions = await generateOptions(fonts, "serif");
 
     if (_root === null) {
         return;
@@ -81,12 +86,13 @@ const render = async () => {
             </footer>
         </main>
     `;
-};
+}
 
 /**
  * 양식 제출 이벤트 핸들러를 추가합니다.
  */
-const addFormSubmitHandler = async (): Promise<void> => {
+
+async function addFormSubmitHandler(): Promise<void> {
     const _form = document.querySelector("form");
 
     if (_form === null) {
@@ -95,20 +101,22 @@ const addFormSubmitHandler = async (): Promise<void> => {
     _form.addEventListener("submit", async (e) => {
         e.preventDefault();
         const formData = new FormData(e.target as HTMLFormElement);
-        const settings = Object.fromEntries(
-            formData as unknown as [string, string][]
+        const settings = Object.fromEntries(formData) as Settings;
+        Object.entries(settings).forEach(
+            async ([key, value]) =>
+                await extensionSettings.set(key as keyof Settings, value)
         );
-        await setSettings(settings);
         log.info("설정이 저장되었습니다.", settings);
     });
-};
+}
 
 /**
  * Storage에 저장된 설정으로부터 양식 값을 복원합니다.
  */
-const restoreFormValue = async (): Promise<void> => {
+
+async function restoreFormValue(): Promise<void> {
     const _form = document.querySelector("form");
-    const settings = await getSettings();
+    const settings = await extensionSettings.getAll();
     const isEmpty = Object.keys(settings).length === 0;
 
     if (_form === null) {
@@ -123,15 +131,14 @@ const restoreFormValue = async (): Promise<void> => {
         _form[formKey].value = settings[formKey];
     }
     log.info("설정이 복원되었습니다.", settings);
-};
+}
 
 /**
  * 팝업을 초기화합니다.
  */
-const initialize = async () => {
+
+(async function main() {
     await render();
     await addFormSubmitHandler();
     await restoreFormValue();
-};
-
-initialize();
+})();
