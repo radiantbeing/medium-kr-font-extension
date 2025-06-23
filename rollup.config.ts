@@ -24,9 +24,13 @@ const configs: RollupOptions[] = [
         // 재실행해야 합니다.
 
         plugins: [
-            del({targets: "dist"}),
+            del({
+                targets: "dist",
+                runOnce: true
+            }),
             copy({
-                targets: [{src: "public/*", dest: "dist"}]
+                targets: [{src: "public/*", dest: "dist"}],
+                copyOnce: true
             }),
             typescript(),
             terser()
