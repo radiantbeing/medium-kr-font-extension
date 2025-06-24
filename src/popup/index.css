@@ -5,6 +5,7 @@
     --color-gray: #6b6b6b;
     --color-accent: #1a8917;
     --color-dark-accent: #156d12;
+    --color-danger: #ff2d26;
 }
 
 * {
@@ -12,6 +13,7 @@
 }
 
 body {
+    width: 220px;
     margin: 0;
     color: var(--color-black);
 }
@@ -81,4 +83,12 @@ footer {
     justify-content: space-between;
     margin-top: 10px;
     font-size: small;
+}
+
+.indicator-active {
+    color: var(--color-accent);
+}
+
+.indicator-inactive {
+    color: var(--color-danger);
 }
