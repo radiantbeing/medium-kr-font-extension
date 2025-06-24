@@ -3,6 +3,10 @@ import typescript from "@rollup/plugin-typescript";
 import del from "rollup-plugin-delete";
 import copy from "rollup-plugin-copy";
 import terser from "@rollup/plugin-terser";
+import replace from "@rollup/plugin-replace";
+import {nodeResolve} from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import css from "rollup-plugin-import-css";
 
 const configs: RollupOptions[] = [
     {
@@ -37,13 +41,27 @@ const configs: RollupOptions[] = [
         ]
     },
     {
-        input: "src/popup.ts",
+        input: "src/popup/index.tsx",
         output: {
             file: "dist/popup.js",
             format: "es",
             sourcemap: "inline"
         },
-        plugins: [typescript(), terser()]
+        plugins: [
+            nodeResolve({
+                browser: true
+            }),
+            commonjs(),
+            replace({
+                "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+                preventAssignment: true
+            }),
+            typescript(),
+            css({
+                inject: true
+            }),
+            terser()
+        ]
     },
     {
         input: "src/service-worker.ts",
