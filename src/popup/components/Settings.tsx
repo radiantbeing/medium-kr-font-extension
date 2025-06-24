@@ -36,15 +36,15 @@ export default function Settings(): JSX.Element {
                             <option value="serif">Serif</option>
                         </optgroup>
                         <optgroup label="Sans Serif">
-                            {sansSerifFonts.map(({name, value}) => (
-                                <option key={value} value={value}>
+                            {sansSerifFonts.map(({id, name}) => (
+                                <option key={id} value={id}>
                                     {name}
                                 </option>
                             ))}
                         </optgroup>
                         <optgroup label="Serif">
-                            {serifFonts.map(({name, value}) => (
-                                <option key={value} value={value}>
+                            {serifFonts.map(({id, name}) => (
+                                <option key={id} value={id}>
                                     {name}
                                 </option>
                             ))}

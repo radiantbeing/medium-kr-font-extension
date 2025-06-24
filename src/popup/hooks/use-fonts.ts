@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import font, {type Font} from "../../lib/font";
+import {type Font, getAllFonts} from "../../lib/font";
 
 interface UseFontsReturn {
     fonts: Font[];
@@ -10,17 +10,17 @@ interface UseFontsReturn {
 export default function useFonts(): UseFontsReturn {
     const [fonts, setFonts] = useState<Font[]>([]);
 
-    const sansSerifFonts = fonts.filter((f) => f.style === "sans-serif");
-    const serifFonts = fonts.filter((f) => f.style === "serif");
+    const sansSerifFonts = fonts.filter((f) => f.type === "sans-serif");
+    const serifFonts = fonts.filter((f) => f.type === "serif");
 
     useEffect(function () {
         let ignore = false;
         async function loadAllFonts(): Promise<void> {
             if (!ignore) {
-                const loadedFonts = await font.getAll();
+                const loadedFonts = await getAllFonts();
                 loadedFonts.sort(function (a, b) {
-                    if (a.style !== b.style) {
-                        return a.style.localeCompare(b.style);
+                    if (a.type !== b.type) {
+                        return a.type.localeCompare(b.type);
                     }
                     return a.name.localeCompare(b.name);
                 });

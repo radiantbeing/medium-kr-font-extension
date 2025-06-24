@@ -1,10 +1,10 @@
 import log from "./log";
 
 type Font = {
-    value: string;
+    id: string;
     name: string;
-    style: "sans-serif" | "serif";
-    cssPath: string;
+    type: "sans-serif" | "serif";
+    cssSrc: string;
 };
 
 function isFont(item: unknown): item is Font {
@@ -13,14 +13,14 @@ function isFont(item: unknown): item is Font {
     }
     const font = item as Font;
     return (
-        typeof font.value === "string" &&
+        typeof font.id === "string" &&
         typeof font.name === "string" &&
-        (font.style === "sans-serif" || font.style === "serif") &&
-        typeof font.cssPath === "string"
+        (font.type === "sans-serif" || font.type === "serif") &&
+        typeof font.cssSrc === "string"
     );
 }
 
-async function getFonts(): Promise<Font[]> {
+async function getAllFonts(): Promise<Font[]> {
     try {
         const response = await fetch(
             chrome.runtime.getURL("fonts/metadata.json")
@@ -42,7 +42,7 @@ async function getFonts(): Promise<Font[]> {
     }
 }
 
-export {type Font};
+export {type Font, getAllFonts};
 export default Object.freeze({
-    getAll: getFonts
+    getAll: getAllFonts
 });

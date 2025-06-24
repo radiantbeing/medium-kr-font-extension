@@ -1,13 +1,13 @@
 import dom from "./lib/dom";
-import font, {type Font} from "./lib/font";
+import {getAllFonts} from "./lib/font";
 import settings from "./lib/settings";
 
 const FONT_CSS_ID = "mkrf-font-family-style";
 
-function insertFontCSS(font: Font["value"]): void {
+function insertFontCSS(fontID: string): void {
     const css = `
     * {
-        font-family: ${font} !important;
+        font-family: ${fontID} !important;
     }
     pre *,
     code {
@@ -22,8 +22,8 @@ function removeFontCSS(): void {
 }
 
 async function insertFontFaceCSSs(): Promise<void> {
-    const fonts = await font.getAll();
-    const cssPaths = fonts.map((font) => font.cssPath);
+    const fonts = await getAllFonts();
+    const cssPaths = fonts.map((f) => f.cssSrc);
     const cssContents = await Promise.all(
         cssPaths.map(async function (path) {
             const response = await fetch(chrome.runtime.getURL(path));
