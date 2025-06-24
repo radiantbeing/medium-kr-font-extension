@@ -49,7 +49,7 @@
 1. `public/fonts/<new_font>/`에 글꼴 파일과 `@font-face`가 선언된 CSS 파일, LICENSE 문서를 추가합니다.
 2. `public/fonts/metadata.json`에 신규 글꼴의 메타데이터를 추가합니다.
 
-    ```json
+    ```jsonc
     // public/fonts/metadata.json
     [
         // ...
