@@ -1,7 +1,7 @@
 {
     "name": "medium-kr-font-extension",
-    "version": "1.0.8",
-    "description": "아름다운 한글 글꼴로 새롭게 즐기는 Medium",
+    "version": "1.0.9",
+    "description": "Medium, 아름다운 한글 글꼴로 새롭게.",
     "homepage": "https://github.com/radiantbeing/medium-kr-font-extension#readme",
     "bugs": {
         "url": "https://github.com/radiantbeing/medium-kr-font-extension/issues"
