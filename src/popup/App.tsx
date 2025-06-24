@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Settings from "./components/Settings";
-import Indicator from "./components/Indicator";
+import Information from "./components/Information";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -8,7 +8,7 @@ export default function App() {
         <main>
             <Header />
             <Settings />
-            <Indicator />
+            <Information />
             <Footer />
         </main>
     );

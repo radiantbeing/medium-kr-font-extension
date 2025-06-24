@@ -13,7 +13,6 @@
 }
 
 body {
-    width: 220px;
     margin: 0;
     color: var(--color-black);
 }
@@ -22,7 +21,7 @@ main {
     padding: 12px;
 }
 
-main > p {
+main p {
     word-break: keep-all;
 }
 
@@ -78,6 +77,12 @@ input[type="submit"]:hover {
     border-color: var(--color-dark-accent);
 }
 
+input[type="submit"]:disabled {
+    background-color: var(--color-gray);
+    border-color: var(--color-gray);
+    cursor: not-allowed;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -85,10 +90,10 @@ footer {
     font-size: small;
 }
 
-.indicator-active {
+.information-positive {
     color: var(--color-accent);
 }
 
-.indicator-inactive {
+.information-negative {
     color: var(--color-danger);
 }

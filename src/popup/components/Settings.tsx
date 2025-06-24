@@ -1,11 +1,13 @@
 import {type JSX, type FormEvent, type ChangeEvent} from "react";
 import useFonts from "../hooks/use-fonts";
 import useSettings from "../hooks/use-settings";
+import useMediumTabActive from "../hooks/use-medium-tab-active";
 import {type Settings} from "../../lib/settings";
 
 export default function Settings(): JSX.Element {
     const {sansSerifFonts, serifFonts} = useFonts();
     const {settings, changeSettings, applySettings} = useSettings();
+    const isMedium = useMediumTabActive();
 
     function handleChange<K extends keyof Settings>(
         e: ChangeEvent<HTMLSelectElement>
@@ -52,7 +54,7 @@ export default function Settings(): JSX.Element {
                     </select>
                 </label>
             </fieldset>
-            <input type="submit" value="적용" />
+            <input type="submit" disabled={!isMedium} value="적용" />
         </form>
     );
 }
