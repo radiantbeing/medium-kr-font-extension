@@ -18,6 +18,7 @@ function removeCSS(id: string): void {
     styleElement.remove();
 }
 
+export {insertCSS, removeCSS};
 export default Object.freeze({
     insertCSS,
     removeCSS
