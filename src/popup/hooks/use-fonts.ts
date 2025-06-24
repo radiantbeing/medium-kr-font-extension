@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {type Font, getAllFonts} from "../../lib/font";
+import {type Font, compareFonts, getAllFonts} from "../../lib/font";
 
 interface UseFontsReturn {
     fonts: Font[];
@@ -18,12 +18,7 @@ export default function useFonts(): UseFontsReturn {
         async function loadAllFonts(): Promise<void> {
             if (!ignore) {
                 const loadedFonts = await getAllFonts();
-                loadedFonts.sort(function (a, b) {
-                    if (a.type !== b.type) {
-                        return a.type.localeCompare(b.type);
-                    }
-                    return a.name.localeCompare(b.name);
-                });
+                loadedFonts.sort(compareFonts);
                 setFonts(loadedFonts);
             }
         }

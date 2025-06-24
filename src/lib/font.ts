@@ -42,7 +42,15 @@ async function getAllFonts(): Promise<Font[]> {
     }
 }
 
-export {type Font, getAllFonts};
+function compareFonts(a: Font, b: Font): number {
+    if (a.type !== b.type) {
+        return a.type.localeCompare(b.type);
+    }
+    return a.name.localeCompare(b.name);
+}
+
+export {type Font, compareFonts, getAllFonts};
 export default Object.freeze({
+    compare: compareFonts,
     getAll: getAllFonts
 });
