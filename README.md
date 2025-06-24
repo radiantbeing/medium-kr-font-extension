@@ -11,7 +11,7 @@
 1. Chrome 웹 스토어에서 [Medium KR Font](https://chromewebstore.google.com/detail/medium-kr-font/lkbbjppklcnjoigfnlhmnommkjkbjdgf)을 설치합니다.
 2. 확장 프로그램에서 `Medium KR Font`를 선택하고 원하는 글꼴을 적용하세요.
 
-![Medium Story 캡처](./docs/capture.png)
+![Medium Story 캡처](./docs/screenshot.png)
 
 ## 지원 글꼴 목록
 
